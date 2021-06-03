@@ -10,6 +10,7 @@
     { "dir": "src", "subdirs": true },
     { "dir": "examples", "subdirs": true, "type": "dev" }
   ],
+  "bs-dependencies": ["@rescript/react"],
   "package-specs": {
     "module": "es6",
     "in-source": true
