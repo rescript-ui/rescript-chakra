@@ -1,0 +1,17 @@
+{
+  "name": "rescript-chakra",
+  "refmt": 3,
+  "reason": {
+    "react-jsx": 3
+  },
+  "suffix": ".js",
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "sources": [
+    { "dir": "src", "subdirs": true },
+    { "dir": "examples", "subdirs": true, "type": "dev" }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  }
+}

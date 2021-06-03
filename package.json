@@ -1,0 +1,23 @@
+{
+  "name": "rescript-chakra",
+  "version": "0.0.0",
+  "description": "ReScript binding for React Chakra-UI.",
+  "author": "ri7nz <hi@rin.rocks>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ri7nz/rescript-chakra.git"
+  },
+  "bugs": "https://github.com/ri7nz/rescript-chakra/issues",
+  "scripts": {
+    "start": "rescript build -w",
+    "build": "rescript build -with-deps",
+    "clean": "rescript clean"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "rescript": "9.1.1"
+  }
+}
