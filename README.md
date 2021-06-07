@@ -104,10 +104,10 @@ This is following and closely same with Chakra-UI. [**See Style Props**](https:/
 - [x] [Border Radius](https://chakra-ui.com/docs/features/style-props#border-radius)
 - [x] [Position](https://chakra-ui.com/docs/features/style-props#position)
 - [x] [Shadow](https://chakra-ui.com/docs/features/style-props#shadow)
-- [ ] [Pseudo](https://chakra-ui.com/docs/features/style-props#pseudo) (_NOT implemeted_)
+- [ ] [Pseudo](https://chakra-ui.com/docs/features/style-props#pseudo) (_NOT implemented_)
 - [ ] [Other Style Props](https://chakra-ui.com/docs/features/style-props#other-props) 🚧  (_Partially Implemented_)
 
-All of Style Props implementation is write in File:[Chakra__MakeProps.res](https://github.com/ri7nz/rescript-chakra/blob/main/src/Chakra__MakeProps.res)
+All of Style Props implementation is write in File:[Chakra__MakeProps.res](https://github.com/ri7nz/rescript-chakra/blob/main/src/Components/Chakra__MakeProps.res)
    
 ## Component
    
@@ -226,8 +226,11 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
 - [ ] useToken
 
 # Contribution 
+## Make a Pull Request 
+* Please, refer with [conventionalcommits.org](https://www.conventionalcommits.org) for write `commit` message.
+
 ## Make a new component binding
-I'm use [hygen.io](https://hygen.io) for generate new component binding base on `Box.res`, see [\_templates/Box/new/new.ejs.t](./_templates/Box/new/new.ejs.t)
+I'm use [hygen.io](https://hygen.io) for generate new component binding base on `Box.res`, see [\_templates/Box/new/new.ejs.t](https://github.com/ri7nz/rescript-chakra/blob/main/_templates/Box/new/new.ejs.t)
 USAGE:
 * basic
 ```console
