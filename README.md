@@ -21,6 +21,7 @@
     * [Others](#others)
     * [Hooks](#hooks)
 * [Contribution](#contribution)
+  * [Make a Pull Request](#make-a-pull-request)
   * [Make a new component binding](#make-a-new-component-binding)
 * [Acknowledgement](#acknowledgement)
 
@@ -107,7 +108,7 @@ This is following and closely same with Chakra-UI. [**See Style Props**](https:/
 - [ ] [Pseudo](https://chakra-ui.com/docs/features/style-props#pseudo) (_NOT implemented_)
 - [ ] [Other Style Props](https://chakra-ui.com/docs/features/style-props#other-props) 🚧  (_Partially Implemented_)
 
-All of Style Props implementation is write in File:[Chakra__MakeProps.res](https://github.com/ri7nz/rescript-chakra/blob/main/src/Components/Chakra__MakeProps.res)
+All of Style Props implementation is write in File:[Chakra__MakeProps.res](https://github.com/ri7nz/rescript-chakra/blob/main/src/Interfaces/Chakra__MakeProps.res)
    
 ## Component
    
