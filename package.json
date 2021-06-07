@@ -11,8 +11,10 @@
   "bugs": "https://github.com/ri7nz/rescript-chakra/issues",
   "scripts": {
     "predocs": "yarn clean",
-    "docs": "yarn build && bsdoc build rescript-chakra",
+    "doc": "./node_modules/.bin/bsdoc",
+    "docs": "yarn build && yarn doc build rescript-chakra",
     "start": "rescript build -w",
+    "prebuild": "rescript clean",
     "build": "rescript build -with-deps",
     "clean": "rescript clean"
   },
