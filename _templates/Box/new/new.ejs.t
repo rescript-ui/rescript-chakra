@@ -189,50 +189,50 @@ external make: (
   ~textShadow: Identity.t=?,
   ~boxShadow: Identity.t=?,
   /**
-    TODO
     Pseudo
     @see <https://chakra-ui.com/docs/features/style-props#pseudo>
-  _hover
-  _active
-  _focus
-  _highlighted
-  _focusWithin
-  _focusVisible
-  _disabled
-  _readOnly
-  _before
-  _after
-  _empty
-  _expanded
-  _checked
-  _grabbed
-  _pressed
-  _invalid
-  _valid
-  _loading
-  _selected
-  _hidden
-  _autofill
-  _even
-  _odd
-  _first
-  _last
-  _notFirst
-  _notLast
-  _visited
-  _activeLink
-  _activeStep
-  _indeterminate
-  _groupHover
-  _groupFocus
-  _groupActive
-  _groupDisabled
-  _groupInvalid
-  _groupChecked
-  _placeholder
-  _fullScreen
-  _selection
    **/
+  @as("_hover") ~_hover: Pseudo.t=?,
+  @as("_active") ~_active: Pseudo.t=?,
+  @as("_focus") ~_focus: Pseudo.t=?,
+  @as("_highlighted") ~_highlighted: Pseudo.t=?,
+  @as("_focusWithin") ~_focusWithin: Pseudo.t=?,
+  @as("_focusVisible") ~_focusVisible: Pseudo.t=?,
+  @as("_disabled") ~_disabled: Pseudo.t=?,
+  @as("_readOnly") ~_readOnly: Pseudo.t=?,
+  @as("_before") ~_before: Pseudo.t=?,
+  @as("_after") ~_after: Pseudo.t=?,
+  @as("_empty") ~_empty: Pseudo.t=?,
+  @as("_expanded") ~_expanded: Pseudo.t=?,
+  @as("_checked") ~_checked: Pseudo.t=?,
+  @as("_grabbed") ~_grabbed: Pseudo.t=?,
+  @as("_pressed") ~_pressed: Pseudo.t=?,
+  @as("_invalid") ~_invalid: Pseudo.t=?,
+  @as("_valid") ~_valid: Pseudo.t=?,
+  @as("_loading") ~_loading: Pseudo.t=?,
+  @as("_selected") ~_selected: Pseudo.t=?,
+  @as("_hidden") ~_hidden: Pseudo.t=?,
+  @as("_autofill") ~_autofill: Pseudo.t=?,
+  @as("_even") ~_even: Pseudo.t=?,
+  @as("_odd") ~_odd: Pseudo.t=?,
+  @as("_first") ~_first: Pseudo.t=?,
+  @as("_last") ~_last: Pseudo.t=?,
+  @as("_notFirst") ~_notFirst: Pseudo.t=?,
+  @as("_notLast") ~_notLast: Pseudo.t=?,
+  @as("_visited") ~_visited: Pseudo.t=?,
+  @as("_activeLink") ~_activeLink: Pseudo.t=?,
+  @as("_activeStep") ~_activeStep: Pseudo.t=?,
+  @as("_indeterminate") ~_indeterminate: Pseudo.t=?,
+  @as("_groupHover") ~_groupHover: Pseudo.t=?,
+  @as("_groupFocus") ~_groupFocus: Pseudo.t=?,
+  @as("_groupActive") ~_groupActive: Pseudo.t=?,
+  @as("_groupDisabled") ~_groupDisabled: Pseudo.t=?,
+  @as("_groupInvalid") ~_groupInvalid: Pseudo.t=?,
+  @as("_groupChecked") ~_groupChecked: Pseudo.t=?,
+  @as("_placeholder") ~_placeholder: Pseudo.t=?,
+  @as("_fullScreen") ~_fullScreen: Pseudo.t=?,
+  @as("_selection") ~_selection: Pseudo.t=?,
+
   /**
     TODO
     Other Props 
