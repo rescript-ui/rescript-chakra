@@ -1,10 +1,14 @@
 {
   "name": "rescript-chakra",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ReScript binding for React Chakra-UI.",
   "author": "ri7nz <hi@rin.rocks>",
   "license": "MIT",
   "homepage": "https://rescript-chakra.vercel.app/",
+  "files": [
+    "/src",
+    "bsconfig.json"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ri7nz/rescript-chakra.git"
