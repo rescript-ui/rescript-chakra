@@ -1,3 +1,4 @@
+let pseudo = Chakra__MakeProps.Pseudo.make
 module Provider = {
   @module("@chakra-ui/react") @react.component
   external make: (

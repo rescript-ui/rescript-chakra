@@ -105,7 +105,7 @@ This is following and closely same with Chakra-UI. [**See Style Props**](https:/
 - [x] [Border Radius](https://chakra-ui.com/docs/features/style-props#border-radius)
 - [x] [Position](https://chakra-ui.com/docs/features/style-props#position)
 - [x] [Shadow](https://chakra-ui.com/docs/features/style-props#shadow)
-- [ ] [Pseudo](https://chakra-ui.com/docs/features/style-props#pseudo) (_NOT implemented_)
+- [x] [Pseudo](https://chakra-ui.com/docs/features/style-props#pseudo)
 - [ ] [Other Style Props](https://chakra-ui.com/docs/features/style-props#other-props) 🚧  (_Partially Implemented_)
 
 All of Style Props implementation is write in File:[Chakra__MakeProps.res](https://github.com/ri7nz/rescript-chakra/blob/main/src/Interfaces/Chakra__MakeProps.res)
