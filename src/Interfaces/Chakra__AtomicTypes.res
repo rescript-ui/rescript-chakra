@@ -1888,115 +1888,115 @@ module Colors = {
     | #black
     | #white
     | #gray
-    | #gray50
-    | #gray100
-    | #gray200
-    | #gray300
-    | #gray400
-    | #gray500
-    | #gray600
-    | #gray700
-    | #gray800
-    | #gray900
+    | @as("gray.50") #gray50
+    | @as("gray.100") #gray100
+    | @as("gray.200") #gray200
+    | @as("gray.300") #gray300
+    | @as("gray.400") #gray400
+    | @as("gray.500") #gray500
+    | @as("gray.600") #gray600
+    | @as("gray.700") #gray700
+    | @as("gray.800") #gray800
+    | @as("gray.900") #gray900
     | #red
-    | #red50
-    | #red100
-    | #red200
-    | #red300
-    | #red400
-    | #red500
-    | #red600
-    | #red700
-    | #red800
-    | #red900
+    | @as("red.50") #red50
+    | @as("red.100") #red100
+    | @as("red.200") #red200
+    | @as("red.300") #red300
+    | @as("red.400") #red400
+    | @as("red.500") #red500
+    | @as("red.600") #red600
+    | @as("red.700") #red700
+    | @as("red.800") #red800
+    | @as("red.900") #red900
     | #orange
-    | #orange50
-    | #orange100
-    | #orange200
-    | #orange300
-    | #orange400
-    | #orange500
-    | #orange600
-    | #orange700
-    | #orange800
-    | #orange900
+    | @as("orange.50") #orange50
+    | @as("orange.100") #orange100
+    | @as("orange.200") #orange200
+    | @as("orange.300") #orange300
+    | @as("orange.400") #orange400
+    | @as("orange.500") #orange500
+    | @as("orange.600") #orange600
+    | @as("orange.700") #orange700
+    | @as("orange.800") #orange800
+    | @as("orange.900") #orange900
     | #yellow
-    | #yellow50
-    | #yellow100
-    | #yellow200
-    | #yellow300
-    | #yellow400
-    | #yellow500
-    | #yellow600
-    | #yellow700
-    | #yellow800
-    | #yellow900
+    | @as("yellow.50") #yellow50
+    | @as("yellow.100") #yellow100
+    | @as("yellow.200") #yellow200
+    | @as("yellow.300") #yellow300
+    | @as("yellow.400") #yellow400
+    | @as("yellow.500") #yellow500
+    | @as("yellow.600") #yellow600
+    | @as("yellow.700") #yellow700
+    | @as("yellow.800") #yellow800
+    | @as("yellow.900") #yellow900
     | #green
-    | #green50
-    | #green100
-    | #green200
-    | #green300
-    | #green400
-    | #green500
-    | #green600
-    | #green700
-    | #green800
-    | #green900
+    | @as("green.50") #green50
+    | @as("green.100") #green100
+    | @as("green.200") #green200
+    | @as("green.300") #green300
+    | @as("green.400") #green400
+    | @as("green.500") #green500
+    | @as("green.600") #green600
+    | @as("green.700") #green700
+    | @as("green.800") #green800
+    | @as("green.900") #green900
     | #teal
-    | #teal50
-    | #teal100
-    | #teal200
-    | #teal300
-    | #teal400
-    | #teal500
-    | #teal600
-    | #teal700
-    | #teal800
-    | #teal900
+    | @as("teal.50") #teal50
+    | @as("teal.100") #teal100
+    | @as("teal.200") #teal200
+    | @as("teal.300") #teal300
+    | @as("teal.400") #teal400
+    | @as("teal.500") #teal500
+    | @as("teal.600") #teal600
+    | @as("teal.700") #teal700
+    | @as("teal.800") #teal800
+    | @as("teal.900") #teal900
     | #blue
-    | #blue50
-    | #blue100
-    | #blue200
-    | #blue300
-    | #blue400
-    | #blue500
-    | #blue600
-    | #blue700
-    | #blue800
-    | #blue900
+    | @as("blue.50") #blue50
+    | @as("blue.100") #blue100
+    | @as("blue.200") #blue200
+    | @as("blue.300") #blue300
+    | @as("blue.400") #blue400
+    | @as("blue.500") #blue500
+    | @as("blue.600") #blue600
+    | @as("blue.700") #blue700
+    | @as("blue.800") #blue800
+    | @as("blue.900") #blue900
     | #cyan
-    | #cyan50
-    | #cyan100
-    | #cyan200
-    | #cyan300
-    | #cyan400
-    | #cyan500
-    | #cyan600
-    | #cyan700
-    | #cyan800
-    | #cyan900
+    | @as("cyan.50") #cyan50
+    | @as("cyan.100") #cyan100
+    | @as("cyan.200") #cyan200
+    | @as("cyan.300") #cyan300
+    | @as("cyan.400") #cyan400
+    | @as("cyan.500") #cyan500
+    | @as("cyan.600") #cyan600
+    | @as("cyan.700") #cyan700
+    | @as("cyan.800") #cyan800
+    | @as("cyan.900") #cyan900
     | #purple
-    | #purple50
-    | #purple100
-    | #purple200
-    | #purple300
-    | #purple400
-    | #purple500
-    | #purple600
-    | #purple700
-    | #purple800
-    | #purple900
+    | @as("purple.50") #purple50
+    | @as("purple.100") #purple100
+    | @as("purple.200") #purple200
+    | @as("purple.300") #purple300
+    | @as("purple.400") #purple400
+    | @as("purple.500") #purple500
+    | @as("purple.600") #purple600
+    | @as("purple.700") #purple700
+    | @as("purple.800") #purple800
+    | @as("purple.900") #purple900
     | #pink
-    | #pink50
-    | #pink100
-    | #pink200
-    | #pink300
-    | #pink400
-    | #pink500
-    | #pink600
-    | #pink700
-    | #pink800
-    | #pink900
+    | @as("pink.50") #pink50
+    | @as("pink.100") #pink100
+    | @as("pink.200") #pink200
+    | @as("pink.300") #pink300
+    | @as("pink.400") #pink400
+    | @as("pink.500") #pink500
+    | @as("pink.600") #pink600
+    | @as("pink.700") #pink700
+    | @as("pink.800") #pink800
+    | @as("pink.900") #pink900
   ]
 
   let toString = x =>

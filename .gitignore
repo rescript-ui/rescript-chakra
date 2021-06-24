@@ -166,3 +166,4 @@ temp/
 .pnp.*
 
 .vercel
+src/**/*.js

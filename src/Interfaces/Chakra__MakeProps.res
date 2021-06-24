@@ -982,3 +982,568 @@ module Stat = {
     let fromOption = o => o->optionMap(identity)
   }
 }
+
+module Pseudo = {
+  @ocaml.docs(
+    "BEWARE!, it's still development, maybe some props are invalid or wrong implementation."
+  )
+  type t
+  @obj
+  external pseudo: (
+    /**
+    Margin and Padding
+    @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding>
+   **/
+    ~margin: Identity.t=?,
+    ~marginTop: Identity.t=?,
+    ~marginRight: Identity.t=?,
+    ~marginEnd: Identity.t=?,
+    ~marginBottom: Identity.t=?,
+    ~marginLeft: Identity.t=?,
+    ~marginStart: Identity.t=?,
+    // ? ~mx: Identity.t=?,
+    // ? ~my: Identity.t=?,
+    ~padding: Identity.t=?,
+    ~paddingTop: Identity.t=?,
+    ~paddingRight: Identity.t=?,
+    ~paddingEnd: Identity.t=?,
+    ~paddingBottom: Identity.t=?,
+    ~paddingLeft: Identity.t=?,
+    ~paddingStart: Identity.t=?,
+    // ? ~px: Identity.t=?,
+    // ? ~py: Identity.t=?,
+    /**
+    Colors and BackgroundColor
+    @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
+   **/
+    // ? ~colorScheme: Identity.t=?,
+    ~color: Identity.t=?,
+    ~backgroundColor: Identity.t=?,
+    ~opacity: Identity.t=?,
+    /**
+    Gradient
+    @see <https://chakra-ui.com/docs/features/style-props#gradient>
+   **/
+    ~bgGradient: Identity.t=?,
+    ~backgroundClip: Identity.t=?,
+    /**
+    Typography
+    @see <https://chakra-ui.com/docs/features/style-props#typography>
+   **/
+    ~fontFamily: Identity.t=?,
+    ~fontSize: Identity.t=?,
+    ~fontWeight: Identity.t=?,
+    ~letterSpacing: Identity.t=?,
+    ~lineHeight: Identity.t=?,
+    ~textAlign: Identity.t=?,
+    ~fontStyle: Identity.t=?,
+    ~textTransform: Identity.t=?,
+    ~textDecoration: Identity.t=?,
+    /**
+    Layout Width and Height
+    @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height>
+   **/
+    ~width: Identity.t=?,
+    ~maxWidth: Identity.t=?,
+    ~minWidth: Identity.t=?,
+    ~height: Identity.t=?,
+    ~maxHeight: Identity.t=?,
+    ~minHeight: Identity.t=?,
+    ~display: Identity.t=?,
+    ~boxSize: Identity.t=?,
+    ~verticalAlign: Identity.t=?,
+    ~overflow: Identity.t=?,
+    ~overflowY: Identity.t=?,
+    ~overflowX: Identity.t=?,
+    /**
+    Flexbox
+    @see <https://chakra-ui.com/docs/features/style-props#flexbox>
+   **/
+    ~alignItems: Identity.t=?,
+    ~alignContent: Identity.t=?,
+    ~justifyItems: Identity.t=?,
+    ~justifyContent: Identity.t=?,
+    ~flexWrap: Identity.t=?,
+    ~flexDirection: Identity.t=?,
+    ~flex: Identity.t=?,
+    ~flexGrow: Identity.t=?,
+    ~flexShrink: Identity.t=?,
+    ~flexBasis: Identity.t=?,
+    ~justifySelf: Identity.t=?,
+    ~alignSelf: Identity.t=?,
+    ~order: Identity.t=?,
+    /**
+    Grid
+    @see <https://chakra-ui.com/docs/features/style-props#grid-layout>
+   **/
+    ~gridGap: Identity.t=?,
+    ~gridRowGap: Identity.t=?,
+    ~gridColumnGap: Identity.t=?,
+    ~gridColumn: Identity.t=?,
+    ~gridRow: Identity.t=?,
+    ~gridArea: Identity.t=?,
+    ~gridAutoFlow: Identity.t=?,
+    ~gridAutoRows: Identity.t=?,
+    ~gridAutoColumns: Identity.t=?,
+    ~gridTemplateRows: Identity.t=?,
+    ~gridTemplateColumns: Identity.t=?,
+    ~gridTemplateAreas: Identity.t=?,
+    /**
+    Background
+    @see <https://chakra-ui.com/docs/features/style-props#background>
+   **/
+    ~background: Identity.t=?,
+    ~backgroundImage: Identity.t=?,
+    ~backgroundSize: Identity.t=?,
+    ~backgroundPosition: Identity.t=?,
+    ~backgroundRepeat: Identity.t=?,
+    ~backgroundAttachment: Identity.t=?,
+    /**
+    Borders
+    @see<https://chakra-ui.com/docs/features/style-props#border-radius>
+   **/
+    ~border: Identity.t=?,
+    ~borderWidth: Identity.t=?,
+    ~borderStyle: Identity.t=?,
+    ~borderColor: Identity.t=?,
+    ~borderTop: Identity.t=?,
+    ~borderTopWidth: Identity.t=?,
+    ~borderTopStyle: Identity.t=?,
+    ~borderTopColor: Identity.t=?,
+    ~borderRight: Identity.t=?,
+    ~borderEnd: Identity.t=?,
+    ~borderRightWidth: Identity.t=?,
+    ~borderEndWidth: Identity.t=?,
+    ~borderRightStyle: Identity.t=?,
+    ~borderEndStyle: Identity.t=?,
+    ~borderRightColor: Identity.t=?,
+    ~borderEndColor: Identity.t=?,
+    ~borderBottom: Identity.t=?,
+    ~borderBottomWidth: Identity.t=?,
+    ~borderBottomStyle: Identity.t=?,
+    ~borderBottomColor: Identity.t=?,
+    ~borderLeft: Identity.t=?,
+    ~borderStart: Identity.t=?,
+    ~borderLeftWidth: Identity.t=?,
+    ~borderStartWidth: Identity.t=?,
+    ~borderLeftStyle: Identity.t=?,
+    ~borderStartStyle: Identity.t=?,
+    ~borderLeftColor: Identity.t=?,
+    ~borderStartColor: Identity.t=?,
+    ~borderX: Identity.t=?,
+    ~borderY: Identity.t=?,
+    /**
+    Border Radius
+    @see<https://chakra-ui.com/docs/features/style-props#border-radius>
+   **/
+    ~borderRadius: Identity.t=?,
+    ~borderTopLeftRadius: Identity.t=?,
+    ~borderTopStartRadius: Identity.t=?,
+    ~borderTopRightRadius: Identity.t=?,
+    ~borderTopEndRadius: Identity.t=?,
+    ~borderBottomRightRadius: Identity.t=?,
+    ~borderBottomEndRadius: Identity.t=?,
+    ~borderBottomLeftRadius: Identity.t=?,
+    ~borderBottomStartRadius: Identity.t=?,
+    ~borderTopRadius: Identity.t=?,
+    ~borderRightRadius: Identity.t=?,
+    ~borderEndRadius: Identity.t=?,
+    ~borderBottomRadius: Identity.t=?,
+    ~borderLeftRadius: Identity.t=?,
+    ~borderStartRadius: Identity.t=?,
+    /**
+    Position
+    @see <https://chakra-ui.com/docs/features/style-props#position>
+   **/
+    ~position: Identity.t=?,
+    ~zIndex: Identity.t=?,
+    ~top: Identity.t=?,
+    ~right: Identity.t=?,
+    ~bottom: Identity.t=?,
+    ~left: Identity.t=?,
+    /**
+    Shadow
+    @see <https://chakra-ui.com/docs/features/style-props#shadow>
+   **/
+    ~textShadow: Identity.t=?,
+    ~boxShadow: Identity.t=?,
+    /**
+    TODO
+    Other Props 
+    partial implemented
+    @see <https://chakra-ui.com/docs/features/style-props#other-props>
+  ~animation=?,
+  ~appearance=?,
+  ~transform=?,
+  ~transformOrigin=?,
+  ~visibility=?,
+  ~whiteSpace=?,
+  ~userSelect=?,
+  ~pointerEvents=?,
+  ~wordBreak=?,
+  ~overflowWrap=?,
+  ~textOverflow=?,
+  ~boxSizing=?,
+  ~cursor=?,
+  ~resize=?,
+  ~transition=?,
+  ~objectFit=?,
+  ~objectPosition=?,
+  ~objectPosition=?,
+  ~float_=?,
+  ~fill=?,
+  ~stroke=?,
+  ~outline=?,
+   **/
+    ~fill: Identity.t=?,
+    ~stroke: Identity.t=?,
+    unit,
+  ) => t = ""
+
+  let make = (
+    /**
+   Margin and Padding
+  **/
+    ~margin=?,
+    ~marginTop=?,
+    ~marginRight=?,
+    ~marginEnd=?,
+    ~marginBottom=?,
+    ~marginLeft=?,
+    ~marginStart=?,
+    ~padding=?,
+    ~paddingTop=?,
+    ~paddingRight=?,
+    ~paddingEnd=?,
+    ~paddingBottom=?,
+    ~paddingLeft=?,
+    ~paddingStart=?,
+    // ? ~px=?px->Padding.fromOption,
+    // ? ~py=?py->Padding.fromOption,
+    /**
+      Colors and Background Color
+     **/
+    ~color=?,
+    // ? ~colorScheme=?colorScheme->ColorScheme.fromOption,
+    ~backgroundColor=?,
+    ~opacity=?,
+    /**
+      Gradient
+     **/
+    ~bgGradient=?,
+    ~backgroundClip=?,
+    /**
+      Typography
+     **/
+    ~fontFamily=?,
+    ~fontSize=?,
+    ~fontWeight=?,
+    ~letterSpacing=?,
+    ~lineHeight=?,
+    ~textAlign=?,
+    ~fontStyle=?,
+    ~textTransform=?,
+    ~textDecoration=?,
+    /**
+      Layout Width and Height
+     **/
+    ~display=?,
+    ~height=?,
+    ~minHeight=?,
+    ~maxHeight=?,
+    ~width=?,
+    ~minWidth=?,
+    ~maxWidth=?,
+    ~boxSize=?,
+    ~verticalAlign=?,
+    ~overflow=?,
+    ~overflowY=?,
+    ~overflowX=?,
+    /**
+      Flexbox
+     **/
+    ~alignItems=?,
+    ~alignContent=?,
+    ~justifyItems=?,
+    ~justifyContent=?,
+    ~flexWrap=?,
+    ~flexDirection=?,
+    ~flex=?,
+    ~flexGrow=?,
+    ~flexShrink=?,
+    ~flexBasis=?,
+    ~justifySelf=?,
+    ~alignSelf=?,
+    ~order=?,
+    /**
+      Grid
+     **/
+    ~gridGap=?,
+    ~gridRowGap=?,
+    ~gridColumnGap=?,
+    ~gridColumn=?,
+    ~gridRow=?,
+    ~gridArea=?,
+    ~gridAutoFlow=?,
+    ~gridAutoRows=?,
+    ~gridAutoColumns=?,
+    ~gridTemplateRows=?,
+    ~gridTemplateColumns=?,
+    ~gridTemplateAreas=?,
+    /**
+      Background
+     **/
+    ~background=?,
+    ~backgroundImage=?,
+    ~backgroundSize=?,
+    ~backgroundPosition=?,
+    ~backgroundRepeat=?,
+    ~backgroundAttachment=?,
+    /**
+      Borders
+     **/
+    ~border=?,
+    ~borderWidth=?,
+    ~borderStyle=?,
+    ~borderColor=?,
+    ~borderTop=?,
+    ~borderTopWidth=?,
+    ~borderTopStyle=?,
+    ~borderTopColor=?,
+    ~borderRight=?,
+    ~borderEnd=?,
+    ~borderRightWidth=?,
+    ~borderEndWidth=?,
+    ~borderRightStyle=?,
+    ~borderEndStyle=?,
+    ~borderRightColor=?,
+    ~borderEndColor=?,
+    ~borderBottom=?,
+    ~borderBottomWidth=?,
+    ~borderBottomStyle=?,
+    ~borderBottomColor=?,
+    ~borderLeft=?,
+    ~borderStart=?,
+    ~borderLeftWidth=?,
+    ~borderStartWidth=?,
+    ~borderLeftStyle=?,
+    ~borderStartStyle=?,
+    ~borderLeftColor=?,
+    ~borderStartColor=?,
+    ~borderX=?,
+    ~borderY=?,
+    /**
+      Border Radius
+     **/
+    ~borderRadius=?,
+    ~borderTopLeftRadius=?,
+    ~borderTopStartRadius=?,
+    ~borderTopRightRadius=?,
+    ~borderTopEndRadius=?,
+    ~borderBottomRightRadius=?,
+    ~borderBottomEndRadius=?,
+    ~borderBottomLeftRadius=?,
+    ~borderBottomStartRadius=?,
+    ~borderTopRadius=?,
+    ~borderRightRadius=?,
+    ~borderEndRadius=?,
+    ~borderBottomRadius=?,
+    ~borderLeftRadius=?,
+    ~borderStartRadius=?,
+    /**
+      Position
+    **/
+    ~position=?,
+    ~zIndex=?,
+    ~top=?,
+    ~right=?,
+    ~bottom=?,
+    ~left=?,
+    /**
+      Shadow
+    **/
+    ~textShadow=?,
+    ~boxShadow=?,
+    /**
+      TODO
+      Other Props
+     **/
+    ~fill=?,
+    ~stroke=?,
+    (),
+  ) =>
+    pseudo(
+      /**
+      Margin and Padding
+     **/
+      ~margin=?margin->Margin.fromOption,
+      ~marginTop=?marginTop->Margin.fromOption,
+      ~marginRight=?marginRight->Margin.fromOption,
+      ~marginEnd=?marginEnd->Margin.fromOption,
+      ~marginBottom=?marginBottom->Margin.fromOption,
+      ~marginLeft=?marginLeft->Margin.fromOption,
+      ~marginStart=?marginStart->Margin.fromOption,
+      // ~mx=?mx->Margin.fromOption,
+      // ~my=?my->Margin.fromOption,
+      ~padding=?padding->Padding.fromOption,
+      ~paddingTop=?paddingTop->Padding.fromOption,
+      ~paddingRight=?paddingRight->Padding.fromOption,
+      ~paddingEnd=?paddingEnd->Padding.fromOption,
+      ~paddingBottom=?paddingBottom->Padding.fromOption,
+      ~paddingLeft=?paddingLeft->Padding.fromOption,
+      ~paddingStart=?paddingStart->Padding.fromOption,
+      // ? ~px=?px->Padding.fromOption,
+      // ? ~py=?py->Padding.fromOption,
+      /**
+      Colors and Background Color
+     **/
+      ~color=?color->Color.fromOption,
+      // ? ~colorScheme=?colorScheme->ColorScheme.fromOption,
+      ~backgroundColor=?backgroundColor->BackgroundColor.fromOption,
+      ~opacity=?opacity->Opacity.fromOption,
+      /**
+      Gradient
+     **/
+      ~bgGradient=?bgGradient->Gradient.fromOption,
+      ~backgroundClip=?backgroundClip->BackgroundClip.fromOption,
+      /**
+      Typography
+     **/
+      ~fontFamily=?fontFamily->FontFamily.fromOption,
+      ~fontSize=?fontSize->FontSize.fromOption,
+      ~fontWeight=?fontWeight->FontWeight.fromOption,
+      ~letterSpacing=?letterSpacing->LetterSpacing.fromOption,
+      ~lineHeight=?lineHeight->LineHeight.fromOption,
+      ~textAlign=?textAlign->TextAlign.fromOption,
+      ~fontStyle=?fontStyle->FontStyle.fromOption,
+      ~textTransform=?textTransform->TextTransform.fromOption,
+      ~textDecoration=?textDecoration->TextDecoration.fromOption,
+      /**
+      Layout Width and Height
+     **/
+      ~display=?display->Display.fromOption,
+      ~height=?height->Height.fromOption,
+      ~minHeight=?minHeight->Height.fromOption,
+      ~maxHeight=?maxHeight->MaxHeight.fromOption,
+      ~width=?width->Width.fromOption,
+      ~minWidth=?minWidth->Width.fromOption,
+      ~maxWidth=?maxWidth->MaxWidth.fromOption,
+      ~boxSize=?boxSize->BoxSize.fromOption,
+      ~verticalAlign=?verticalAlign->VerticalAlign.fromOption,
+      ~overflow=?overflow->Overflow.fromOption,
+      ~overflowY=?overflowY->Overflow.fromOption,
+      ~overflowX=?overflowX->Overflow.fromOption,
+      /**
+      Flexbox
+     **/
+      ~alignItems=?alignItems->AlignItems.fromOption,
+      ~alignContent=?alignContent->AlignContent.fromOption,
+      ~justifyItems=?justifyItems->JustifyItems.fromOption,
+      ~justifyContent=?justifyContent->JustifyContent.fromOption,
+      ~flexWrap=?flexWrap->FlexWrap.fromOption,
+      ~flexDirection=?flexDirection->FlexDirection.fromOption,
+      ~flex=?flex->Flex.fromOption,
+      ~flexGrow=?flexGrow->FlexGrow.fromOption,
+      ~flexShrink=?flexShrink->FlexShrink.fromOption,
+      ~flexBasis=?flexBasis->FlexBasis.fromOption,
+      ~justifySelf=?justifySelf->JustifySelf.fromOption,
+      ~alignSelf=?alignSelf->AlignSelf.fromOption,
+      ~order=?order->Order.fromOption,
+      /**
+      Grid
+     **/
+      ~gridGap=?gridGap->GridGap.fromOption,
+      ~gridRowGap=?gridRowGap->GridRowGap.fromOption,
+      ~gridColumnGap=?gridColumnGap->GridColumnGap.fromOption,
+      ~gridColumn=?gridColumn->GridColumn.fromOption,
+      ~gridRow=?gridRow->GridRow.fromOption,
+      ~gridArea=?gridArea->GridArea.fromOption,
+      ~gridAutoFlow=?gridAutoFlow->GridAutoFlow.fromOption,
+      ~gridAutoRows=?gridAutoRows->GridAutoRows.fromOption,
+      ~gridAutoColumns=?gridAutoColumns->GridAutoColumns.fromOption,
+      ~gridTemplateRows=?gridTemplateRows->GridTemplateRows.fromOption,
+      ~gridTemplateColumns=?gridTemplateColumns->GridTemplateColumns.fromOption,
+      ~gridTemplateAreas=?gridTemplateAreas->GridTemplateAreas.fromOption,
+      /**
+      Background
+     **/
+      ~background=?background->Background.fromOption,
+      ~backgroundImage=?backgroundImage->BackgroundImage.fromOption,
+      ~backgroundSize=?backgroundSize->BackgroundSize.fromOption,
+      ~backgroundPosition=?backgroundPosition->BackgroundPosition.fromOption,
+      ~backgroundRepeat=?backgroundRepeat->BackgroundRepeat.fromOption,
+      ~backgroundAttachment=?backgroundAttachment->BackgroundAttachment.fromOption,
+      /**
+      Borders
+     **/
+      ~border=?border->Border.fromOption,
+      ~borderWidth=?borderWidth->BorderWidth.fromOption,
+      ~borderStyle=?borderStyle->BorderStyle.fromOption,
+      ~borderColor=?borderColor->BorderColor.fromOption,
+      ~borderTop=?borderTop->Border.fromOption,
+      ~borderTopWidth=?borderTopWidth->BorderWidth.fromOption,
+      ~borderTopStyle=?borderTopStyle->BorderStyle.fromOption,
+      ~borderTopColor=?borderTopColor->BorderColor.fromOption,
+      ~borderRight=?borderRight->Border.fromOption,
+      ~borderEnd=?borderEnd->Border.fromOption,
+      ~borderRightWidth=?borderRightWidth->BorderWidth.fromOption,
+      ~borderEndWidth=?borderEndWidth->BorderWidth.fromOption,
+      ~borderRightStyle=?borderRightStyle->BorderStyle.fromOption,
+      ~borderEndStyle=?borderEndStyle->BorderStyle.fromOption,
+      ~borderRightColor=?borderRightColor->BorderColor.fromOption,
+      ~borderEndColor=?borderEndColor->BorderColor.fromOption,
+      ~borderBottom=?borderBottom->Border.fromOption,
+      ~borderBottomWidth=?borderBottomWidth->BorderWidth.fromOption,
+      ~borderBottomStyle=?borderBottomStyle->BorderStyle.fromOption,
+      ~borderBottomColor=?borderBottomColor->BorderColor.fromOption,
+      ~borderLeft=?borderLeft->Border.fromOption,
+      ~borderStart=?borderStart->Border.fromOption,
+      ~borderLeftWidth=?borderLeftWidth->BorderWidth.fromOption,
+      ~borderStartWidth=?borderStartWidth->BorderWidth.fromOption,
+      ~borderLeftStyle=?borderLeftStyle->BorderStyle.fromOption,
+      ~borderStartStyle=?borderStartStyle->BorderStyle.fromOption,
+      ~borderLeftColor=?borderLeftColor->BorderColor.fromOption,
+      ~borderStartColor=?borderStartColor->BorderColor.fromOption,
+      ~borderX=?borderX->Border.fromOption,
+      ~borderY=?borderY->Border.fromOption,
+      /**
+      Border Radius
+     **/
+      ~borderRadius=?borderRadius->BorderRadius.fromOption,
+      ~borderTopLeftRadius=?borderTopLeftRadius->BorderRadius.fromOption,
+      ~borderTopStartRadius=?borderTopStartRadius->BorderRadius.fromOption,
+      ~borderTopRightRadius=?borderTopRightRadius->BorderRadius.fromOption,
+      ~borderTopEndRadius=?borderTopEndRadius->BorderRadius.fromOption,
+      ~borderBottomRightRadius=?borderBottomRightRadius->BorderRadius.fromOption,
+      ~borderBottomEndRadius=?borderBottomEndRadius->BorderRadius.fromOption,
+      ~borderBottomLeftRadius=?borderBottomLeftRadius->BorderRadius.fromOption,
+      ~borderBottomStartRadius=?borderBottomStartRadius->BorderRadius.fromOption,
+      ~borderTopRadius=?borderTopRadius->BorderRadius.fromOption,
+      ~borderRightRadius=?borderRightRadius->BorderRadius.fromOption,
+      ~borderEndRadius=?borderEndRadius->BorderRadius.fromOption,
+      ~borderBottomRadius=?borderBottomRadius->BorderRadius.fromOption,
+      ~borderLeftRadius=?borderLeftRadius->BorderRadius.fromOption,
+      ~borderStartRadius=?borderStartRadius->BorderRadius.fromOption,
+      /**
+      Position
+    **/
+      ~position=?position->Position.fromOption,
+      ~zIndex=?zIndex->ZIndex.fromOption,
+      ~top=?top->Top.fromOption,
+      ~right=?right->Right.fromOption,
+      ~bottom=?bottom->Bottom.fromOption,
+      ~left=?left->Left.fromOption,
+      /**
+      Shadow
+    **/
+      ~textShadow=?textShadow->TextShadow.fromOption,
+      ~boxShadow=?boxShadow->BoxShadow.fromOption,
+      /**
+      TODO
+      Other Props
+     **/
+      ~fill=?fill->Color.fromOption,
+      ~stroke=?stroke->Color.fromOption,
+      (),
+    )
+}

@@ -77,7 +77,7 @@ module Borders = {
 }
 /**
   Background
-  @see <>
+  @see <https://chakra-ui.com/docs/features/style-props#background>
 **/
 module Background = {
   open Chakra
@@ -93,7 +93,30 @@ module Background = {
     <Box bgImage=#url("/images/kyuubi.png") bgPosition=#center bgRepeat=#noRepeat />
   </>
 }
-
+@ocaml.docs(`Pseudo
+@see <https://chakra-ui.com/docs/features/style-props#pseudo>
+`)
+module Pseudo = {
+  open Chakra
+  @react.component
+  let make = () => <>
+    // :hover style
+    <Button colorScheme=#teal _hover={pseudo(~background=#white, ~color=#teal500, ())}>
+      {"Hover me"->React.string}
+    </Button>
+    // apply :hover over parent element
+    // TODO props {role}
+    // <Box
+    //   role="group"
+    // >
+    //   <Box
+    //     _hover={{ fontWeight: 'semibold' }}
+    //     _groupHover={{ color: 'tomato' }}
+    //   >
+    //   </Box>
+    // </Box>
+  </>
+}
 module App = {
   open Chakra
   @react.component
