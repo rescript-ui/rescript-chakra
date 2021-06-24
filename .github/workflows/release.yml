@@ -1,0 +1,47 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests:
+    name: Test or Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - name: Install dependencies
+        env:
+          CI: true
+        run: |
+          yarn install
+          yarn ci
+      - name: Build All Packages
+        run: yarn run build
+
+  publish:
+    needs: tests
+    name: Publish to Github & NPM or Github Package Registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - env:
+          CI: true
+        run: |
+          yarn install
+          yarn ci
+      - if: success()
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release

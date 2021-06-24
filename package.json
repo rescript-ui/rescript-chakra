@@ -4,31 +4,31 @@
   "description": "ReScript binding for React Chakra-UI.",
   "author": "ri7nz <hi@rin.rocks>",
   "license": "MIT",
+  "homepage": "https://rescript-chakra.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/ri7nz/rescript-chakra.git"
   },
   "bugs": "https://github.com/ri7nz/rescript-chakra/issues",
   "scripts": {
-    "predocs": "yarn clean",
-    "doc": "./node_modules/.bin/bsdoc",
-    "docs": "yarn build && yarn doc build rescript-chakra",
-    "start": "rescript build -w",
+    "start": "rescript build -w -with-deps",
     "prebuild": "rescript clean",
     "build": "rescript build -with-deps",
-    "clean": "rescript clean"
+    "clean": "rescript clean",
+    "semantic-release": "semantic-release",
+    "ci": "yarn install --immutable"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
     "@rescript/react": "0.10.3",
-    "bsdoc": "6.0.4-alpha",
-    "rescript": "9.1.3"
+    "rescript": "9.1.3",
+    "semantic-release": "17.4.4",
+    "semantic-release-npm-github-publish": "1.4.0"
   },
   "peerDependencies": {
-    "@rescript/react": "0.10.3",
-    "react": ">=16.8.1",
-    "react-dom": ">=16.8.1"
+    "@chakra-ui/react": ">=1.6.3",
+    "@rescript/react": "0.10.3"
   }
 }
