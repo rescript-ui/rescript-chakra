@@ -124,8 +124,10 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
   - [ ] GridItem
 - [x] SimpleGrid
 - [x] Stack
+  - [x] VStack
+  - [x] HStack
 - [x] Wrap
-  - [ ] WrapItem
+  - [x] WrapItem
 
 ### Forms
 - [x] Button
