@@ -1,6 +1,6 @@
 {
   "name": "rescript-chakra",
-  "version": "1.1.0",
+  "version": "1.2.0-next.1",
   "description": "⚡️ ReScript bindings for @chakra-ui/react",
   "author": "ri7nz <hi@rin.rocks>",
   "license": "MIT",

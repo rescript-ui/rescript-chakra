@@ -1,3 +1,10 @@
+# [1.2.0-next.1](https://github.com/ri7nz/rescript-chakra/compare/v1.1.0...v1.2.0-next.1) (2021-06-27)
+
+
+### Features
+
+* **Fade, ScaleFade, Slide:** add component binding for Fade, ScaleFade, & Slide ([7b30d49](https://github.com/ri7nz/rescript-chakra/commit/7b30d4945058a1ab28a361c7d993df123567d60f))
+
 # [1.1.0](https://github.com/ri7nz/rescript-chakra/compare/v1.0.0...v1.1.0) (2021-06-27)
 
 
