@@ -1,3 +1,22 @@
+# [1.1.0](https://github.com/ri7nz/rescript-chakra/compare/v1.0.0...v1.1.0) (2021-06-27)
+
+
+### Chores
+
+* **generator:** update for pseudo props ([cce0466](https://github.com/ri7nz/rescript-chakra/commit/cce0466594e7aefc8658367360a66aeade7b2c18))
+* set to commonjs for jest and development ([16fa888](https://github.com/ri7nz/rescript-chakra/commit/16fa888bdf1c6f067d1bf3fb1703147678d6c36d))
+
+
+### Continuous Integration
+
+* **release-workflow:** update release workflow ([f30f55c](https://github.com/ri7nz/rescript-chakra/commit/f30f55ce50ce0716ff7c5f268a42489a093dbf5a))
+* use cache yarn ([#8](https://github.com/ri7nz/rescript-chakra/issues/8)) ([10a8e1f](https://github.com/ri7nz/rescript-chakra/commit/10a8e1f60d828df2b3971f7f44b1570d9ce757be))
+
+
+### Features
+
+* **HStack, VStack, WrapItem:** add bindings for HStack, VStack, & WrapItem ([c17018f](https://github.com/ri7nz/rescript-chakra/commit/c17018f186da0f6fdcd83f58966908bf56d66d98))
+
 # 1.0.0 (2021-06-24)
 
 
