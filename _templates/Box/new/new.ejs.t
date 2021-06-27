@@ -232,7 +232,6 @@ external make: (
   @as("_placeholder") ~_placeholder: Pseudo.t=?,
   @as("_fullScreen") ~_fullScreen: Pseudo.t=?,
   @as("_selection") ~_selection: Pseudo.t=?,
-
   /**
     TODO
     Other Props 
@@ -610,10 +609,6 @@ let makeProps = (
   ~boxShadow=?,
   /**
     TODO
-    Pseudo
-   **/
-  /**
-    TODO
     Other Props
    **/
   ~fill=?,
@@ -793,10 +788,6 @@ let makeProps = (
     **/
     ~textShadow=?textShadow->TextShadow.fromOption,
     ~boxShadow=?boxShadow->BoxShadow.fromOption,
-    /**
-      TODO
-      Pseudo
-     **/
     /**
       TODO
       Other Props
