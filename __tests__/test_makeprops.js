@@ -17,6 +17,16 @@ function toEqual(x, __x) {
 }
 
 Jest.describe("Test MakeProps", (function (param) {
+        var testCasesPseudo_0 = [
+          Chakra.pseudo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, "teal900", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined),
+          {
+            color: "teal.900"
+          }
+        ];
+        var testCasesPseudo = {
+          hd: testCasesPseudo_0,
+          tl: /* [] */0
+        };
         Jest.testAll("Chakra UI Theme Color Variant", {
               hd: [
                 "black",
@@ -694,23 +704,16 @@ Jest.describe("Test MakeProps", (function (param) {
                 var x = Jest.Expect.expect(result);
                 return Jest.Expect.toBe(param[1], x);
               }));
-        var testCasesPseudo_0 = [
-          Chakra.pseudo(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, "teal900", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined),
-          {
-            color: "teal.900"
-          }
-        ];
-        var testCasesPseudo = {
-          hd: testCasesPseudo_0,
-          tl: /* [] */0
-        };
         return Jest.testAll("Pseudo Creation", testCasesPseudo, (function (param) {
                       var x = Jest.Expect.expect(param[0]);
                       return Jest.Expect.toEqual(param[1], x);
                     }));
       }));
 
+var pseudo = Chakra.pseudo;
+
 exports.expect = expect;
 exports.toBe = toBe;
 exports.toEqual = toEqual;
+exports.pseudo = pseudo;
 /*  Not a pure module */
