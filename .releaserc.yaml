@@ -1,11 +1,9 @@
 branch: main
+repositoryUrl: "https://github.com/ri7nz/rescript-chakra.git"
 branches:
-  - "+([1-9])?(.{+([1-9]),x}).x"
+  - "+([0-9])?(.{+([0-9]),x}).x"
   - main
-  - next
-  - name: alpha
-    prerelease: true
-  - name: beta
+  - name: next
     prerelease: true
 ci: false
 dryRun: false

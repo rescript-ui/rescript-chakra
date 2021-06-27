@@ -12,21 +12,19 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12
-      - id: yarn-cache-dir
+      - id: vars
         name: Find Yarn's cache folder
-        run: echo "::set-output name=path::$(yarn config get cacheFolder)"
+        run: |
+          echo "::set-output name=path::$(yarn config get cacheFolder)"
+          echo "::set-output name=commithash::$(git rev-parse --short HEAD)"
       - name: Cache node modules
         uses: actions/cache@v2
         id: yarn-cache
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ${{ steps.yarn-cache-dir.outputs.path }}
-          key: ${{ runner.os }}-yarn-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.vars.outputs.path }}
+          key: ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-${{ env.cache-name }}-
-            ${{ runner.os }}-yarn-
-            ${{ runner.os }}-
+            ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-
       - name: Install dependencies
         # if: ${{ !steps.yarn-cache.outputs.cache-hit }}
         env:
@@ -34,8 +32,12 @@ jobs:
         run: |
           yarn install
           yarn ci
-      - name: Build All Packages
+      - name: Build
         run: yarn run build
+      - name: Test
+        env:
+          CI: true
+        run: yarn run test --coverage
 
   test_publish:
     needs: tests
@@ -45,21 +47,19 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12
-      - id: yarn-cache-dir
+      - id: vars
         name: Find Yarn's cache folder
-        run: echo "::set-output name=path::$(yarn config get cacheFolder)"
+        run: |
+          echo "::set-output name=path::$(yarn config get cacheFolder)"
+          echo "::set-output name=commithash::$(git rev-parse --short HEAD)"
       - name: Cache node modules
         uses: actions/cache@v2
         id: yarn-cache
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ${{ steps.yarn-cache-dir.outputs.path }}
-          key: ${{ runner.os }}-yarn-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.vars.outputs.path }}
+          key: ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-${{ env.cache-name }}-
-            ${{ runner.os }}-yarn-
-            ${{ runner.os }}-
+            ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-
       - name: Install dependencies
         # if: ${{ !steps.yarn-cache.outputs.cache-hit }}
         env:
@@ -75,4 +75,4 @@ jobs:
           NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
         run: |
           echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > /home/runner/work/_temp/.npmrc
-          npx semantic-release --dry-run --debug -b $GITHUB_HEAD_REF
+          yarn run semantic-release --dry-run --debug -b $GITHUB_HEAD_REF
