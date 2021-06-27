@@ -1,12 +1,12 @@
+'use strict';
 
-
-import * as Curry from "rescript/lib/es6/curry.js";
-import * as React from "react";
-import * as Chakra from "../src/Chakra.js";
-import * as Caml_option from "rescript/lib/es6/caml_option.js";
-import * as Chakra__Box from "../src/Components/Chakra__Box.js";
-import * as Chakra__Button from "../src/Components/Chakra__Button.js";
-import * as React$1 from "@chakra-ui/react";
+var Curry = require("rescript/lib/js/curry.js");
+var React = require("react");
+var Chakra = require("../src/Chakra.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
+var Chakra__Box = require("../src/Components/Chakra__Box.js");
+var Chakra__Button = require("../src/Components/Chakra__Button.js");
+var React$1 = require("@chakra-ui/react");
 
 function App$MarginAndProps(Props) {
   return React.createElement(React.Fragment, undefined, React.createElement(React$1.Box, Curry.app(Chakra__Box.makeProps(undefined, "two", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined)("Tomato", undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined), [
@@ -1684,14 +1684,11 @@ var App = {
   make: App$App
 };
 
-export {
-  MarginAndProps ,
-  LayoutWidthHeight ,
-  ColorsAndBackground ,
-  Borders ,
-  Background ,
-  Pseudo ,
-  App ,
-  
-}
+exports.MarginAndProps = MarginAndProps;
+exports.LayoutWidthHeight = LayoutWidthHeight;
+exports.ColorsAndBackground = ColorsAndBackground;
+exports.Borders = Borders;
+exports.Background = Background;
+exports.Pseudo = Pseudo;
+exports.App = App;
 /* react Not a pure module */

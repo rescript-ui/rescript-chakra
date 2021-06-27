@@ -1,12 +1,15 @@
 {
   "name": "rescript-chakra",
   "version": "1.0.0",
-  "description": "ReScript binding for React Chakra-UI.",
+  "description": "⚡️ ReScript bindings for @chakra-ui/react",
   "author": "ri7nz <hi@rin.rocks>",
   "license": "MIT",
   "homepage": "https://rescript-chakra.vercel.app/",
   "files": [
-    "/src",
+    "src/**/*.re",
+    "src/**/*.rei",
+    "src/**/*.res",
+    "src/**/*.resi",
     "bsconfig.json"
   ],
   "repository": {
@@ -15,24 +18,39 @@
   },
   "bugs": "https://github.com/ri7nz/rescript-chakra/issues",
   "scripts": {
-    "start": "rescript build -w -with-deps",
+    "start": "rescript build -w",
     "prebuild": "rescript clean",
     "build": "rescript build -with-deps",
     "clean": "rescript clean",
     "semantic-release": "semantic-release",
-    "ci": "yarn install --immutable"
+    "ci": "yarn install --immutable",
+    "pretest": "yarn build",
+    "test": "jest"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@glennsl/bs-jest": "0.7.0",
     "@rescript/react": "0.10.3",
-    "rescript": "9.1.3",
+    "jest": "26.6.3",
+    "rescript": "9.1.4",
     "semantic-release": "17.4.4",
     "semantic-release-npm-github-publish": "1.4.0"
   },
   "peerDependencies": {
     "@chakra-ui/react": ">=1.6.3",
     "@rescript/react": "0.10.3"
+  },
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/testUtils/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/testUtils/"
+    ]
   }
 }
