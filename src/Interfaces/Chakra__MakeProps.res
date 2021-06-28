@@ -818,6 +818,16 @@ module Top = {
   let fromOption = o => o->optionMap(identity)
 }
 
+module Sizes = {
+  open Chakra__AtomicTypes
+  let rec identity = x =>
+    switch x {
+    | #...Sizes.t as cs => cs->Sizes.toString->Identity.fromString
+    | #array(arr) => arr->arrayMap(identity)->Identity.fromArray
+    }
+  let fromOption = o => o->optionMap(identity)
+}
+
 module Right = Top
 module Bottom = Top
 module Left = Top
@@ -969,6 +979,55 @@ module Stat = {
       }
     let fromOption = o => o->optionMap(identity)
   }
+}
+/**
+  this is module for handle 2 type between [string] or [number]
+ */
+module StringOrNumber = {
+  type t = [#str(string) | #num(float)]
+  let identity = x =>
+    switch x {
+    | #str(str) => str->Identity.fromString
+    | #num(num) => num->Identity.fromFloat
+    }
+  let fromOption = o => o->optionMap(identity)
+}
+/**
+  Object fit module 
+ */
+module ObjectFit = {
+  open Chakra__AtomicTypes
+  let rec identity = x => {
+    switch x {
+    | #...ObjectFit.t as o => o->ObjectFit.toString->Identity.fromString
+    | #array(arr) => arr->arrayMap(identity)->Identity.fromArray
+    }
+  }
+  let fromOption = o => o->optionMap(identity)
+}
+
+module NoOfLines = {
+  @ocaml.text("It could be simply when [@unwrap] can use in [JavaScript] Object.")
+  let identity = x =>
+    switch x {
+    | #num(i) => i->Identity.fromInt
+    | #array(arr) => arr->Identity.fromArray
+    }
+  let fromOption = o => o->optionMap(identity)
+}
+
+module ViewBox = {
+  type t = [#viewBox(float, float, float, float)]
+  let identity = x =>
+    switch x {
+    | #viewBox(a, b, c, d) =>
+      let a = a->Js.Float.toString
+      let b = b->Js.Float.toString
+      let c = c->Js.Float.toString
+      let d = d->Js.Float.toString
+      `${a} ${b} ${c} ${d}`
+    }
+  let fromOption = o => o->optionMap(identity)
 }
 
 include Chakra__Theme
