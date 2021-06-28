@@ -1836,51 +1836,6 @@ module SVG = {
   }
 }
 
-module ColorScheme = {
-  type t = [
-    | #whiteAlpha
-    | #blackAlpha
-    | #gray
-    | #red
-    | #orange
-    | #yellow
-    | #green
-    | #teal
-    | #blue
-    | #cyan
-    | #purple
-    | #pink
-    | #linkedin
-    | #facebook
-    | #messenger
-    | #whatsapp
-    | #twitter
-    | #telegram
-  ]
-
-  let toString = x =>
-    switch x {
-    | #whiteAlpha => "whiteAlpha"
-    | #blackAlpha => "blackAlpha"
-    | #gray => "gray"
-    | #red => "red"
-    | #orange => "orange"
-    | #yellow => "yellow"
-    | #green => "green"
-    | #teal => "teal"
-    | #blue => "blue"
-    | #cyan => "cyan"
-    | #purple => "purple"
-    | #pink => "pink"
-    | #linkedin => "linkedin"
-    | #facebook => "facebook"
-    | #messenger => "messenger"
-    | #whatsapp => "whatsapp"
-    | #twitter => "twitter"
-    | #telegram => "telegram"
-    }
-}
-
 module Colors = {
   type t = [
     | Color.t
