@@ -1,3 +1,12 @@
+module TextAndHeading = {
+  open Chakra
+  @react.component
+  let make = () => <>
+    <Text noOfLines=#num(5)> {"Hello"->React.string} </Text>
+    <Text noOfLines=#array([5, 6, 7])> {"Hello"->React.string} </Text>
+    <Text _as=#i casing=#lowercase> {"Hello"->React.string} </Text>
+  </>
+}
 /**
  @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding>
  **/

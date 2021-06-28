@@ -74,6 +74,8 @@ module Kbd = Chakra__Kbd
 // TODO Typography
 // module Text = Chakra__Text;
 // module Heading = Chakra__Heading;
+module Text = Chakra__Text
+module Heading = Chakra__Heading
 
 // ### Overlay
 // TODO Overlay

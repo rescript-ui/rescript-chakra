@@ -187,6 +187,8 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
 ### Typography
 - [ ] Text
 - [ ] Heading
+- [x] Text
+- [x] Heading
 
 ### Overlay
 - [ ] Alert Dialog
