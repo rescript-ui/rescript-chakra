@@ -185,8 +185,6 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
 - [ ] Toast
 
 ### Typography
-- [ ] Text
-- [ ] Heading
 - [x] Text
 - [x] Heading
 
@@ -214,8 +212,13 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
 - [x] Image
 
 ### Others
-- [ ] Portal
-- [ ] Transitions
+- [x] Portal
+- [x] Transitions
+  - [x] Fade
+  - [x] ScaleFade
+  - [x] Slide
+  - [x] SlideFade
+  - [x] Collapse
 
 ### Hooks
 - [ ] useBoolean

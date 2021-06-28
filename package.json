@@ -2,6 +2,13 @@
   "name": "rescript-chakra",
   "version": "1.2.0-next.1",
   "description": "⚡️ ReScript bindings for @chakra-ui/react",
+  "keywords": [
+    "rescript",
+    "react",
+    "chakra-ui",
+    "ui-component",
+    "bindings"
+  ],
   "author": "ri7nz <hi@rin.rocks>",
   "license": "MIT",
   "homepage": "https://rescript-chakra.vercel.app/",

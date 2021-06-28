@@ -103,10 +103,7 @@ module Icon = Chakra__Icon
 module Image = Chakra__Image
 
 // ### Others
-// TODO Others
-// module Portal = Chakra__Portal;
-// module Transitions = Chakra__Transitions;
-
+module Portal = Chakra__Portal
 include Chakra__Transitions
 // ### Hooks
 // TODO Hooks
