@@ -6,8 +6,8 @@ external make: (
   /**
     Component Props {HStack}
    **/
-  ~as_: string=?,
-  ~isTruncated: Identity.t=?,
+  ~_as: string=?,
+  ~isTruncated: bool=?,
   ~isInline: Identity.t=?,
   ~shouldWrapChildren: Identity.t=?,
   ~spacing: Identity.t=?,
@@ -38,7 +38,7 @@ external make: (
     Colors and BackgroundColor
     @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
    **/
-  ~colorScheme: Identity.t=?,
+  ~colorScheme: ColorScheme.t=?,
   ~color: Identity.t=?,
   ~backgroundColor: Identity.t=?,
   ~opacity: Identity.t=?,
@@ -411,7 +411,6 @@ let makeProps = (
   /**
     Component Props {HStack}
    **/
-  ~isTruncated=?,
   ~align=?,
   ~basis=?,
   ~direction=?,
@@ -461,7 +460,6 @@ let makeProps = (
     Colors and BackgroundColor
    **/
   ~color=?,
-  ~colorScheme=?,
   ~backgroundColor=?,
   ~bgColor=?,
   ~opacity=?,
@@ -633,7 +631,6 @@ let makeProps = (
     /**
       Component Props {HStack}
      **/
-    ~isTruncated=?isTruncated->Bool.fromOption,
     ~isInline=?isInline->Bool.fromOption,
     ~shouldWrapChildren=?shouldWrapChildren->Bool.fromOption,
     ~spacing=?spacing->Margin.fromOption,
@@ -662,7 +659,6 @@ let makeProps = (
       Colors and Background Color
      **/
     ~color=?color->Color.fromOption,
-    ~colorScheme=?colorScheme->ColorScheme.fromOption,
     ~backgroundColor=?bgColor->withShorthand(backgroundColor)->BackgroundColor.fromOption,
     ~opacity=?opacity->Opacity.fromOption,
     /**

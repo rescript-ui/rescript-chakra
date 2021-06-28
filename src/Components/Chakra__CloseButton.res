@@ -6,8 +6,8 @@ external make: (
   /**
     Component Props {CloseButton}
    **/
-  ~as_: string=?,
-  ~isTruncated: Identity.t=?,
+  ~_as: string=?,
+  ~isTruncated: bool=?,
   ~isDisabled: Identity.t=?,
   ~size: Identity.t=?,
   /**
@@ -36,7 +36,7 @@ external make: (
     Colors and BackgroundColor
     @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
    **/
-  ~colorScheme: Identity.t=?,
+  ~colorScheme: ColorScheme.t=?,
   ~color: Identity.t=?,
   ~backgroundColor: Identity.t=?,
   ~opacity: Identity.t=?,
@@ -452,7 +452,6 @@ let makeProps = (
   /**
     Component Props {CloseButton}
    **/
-  ~isTruncated=?,
   ~isDisabled=?,
   ~size=?,
   /**
@@ -494,7 +493,6 @@ let makeProps = (
     Colors and BackgroundColor
    **/
   ~color=?,
-  ~colorScheme=?,
   ~backgroundColor=?,
   ~bgColor=?,
   ~opacity=?,
@@ -666,7 +664,6 @@ let makeProps = (
     /**
       Component Props {CloseButton}
      **/
-    ~isTruncated=?isTruncated->Bool.fromOption,
     ~isDisabled=?isDisabled->Bool.fromOption,
     ~size=?size->CloseButton.Size.fromOption,
     /**
@@ -694,7 +691,6 @@ let makeProps = (
       Colors and Background Color
      **/
     ~color=?color->Color.fromOption,
-    ~colorScheme=?colorScheme->ColorScheme.fromOption,
     ~backgroundColor=?bgColor->withShorthand(backgroundColor)->BackgroundColor.fromOption,
     ~opacity=?opacity->Opacity.fromOption,
     /**

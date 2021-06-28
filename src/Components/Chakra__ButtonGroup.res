@@ -6,8 +6,8 @@ external make: (
   /**
     Component Props {ButtonGroup}
    **/
-  ~as_: string=?,
-  ~isTruncated: Identity.t=?,
+  ~_as: string=?,
+  ~isTruncated: bool=?,
   ~isAttached: Identity.t=?,
   ~isDisabled: Identity.t=?,
   ~size: Identity.t=?,
@@ -39,7 +39,7 @@ external make: (
     Colors and BackgroundColor
     @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
    **/
-  ~colorScheme: Identity.t=?,
+  ~colorScheme: ColorScheme.t=?,
   ~color: Identity.t=?,
   ~backgroundColor: Identity.t=?,
   ~opacity: Identity.t=?,
@@ -455,7 +455,6 @@ let makeProps = (
   /**
     Component Props {ButtonGroup}
    **/
-  ~isTruncated=?,
   ~isAttached=?,
   ~isDisabled=?,
   ~size=?,
@@ -500,7 +499,6 @@ let makeProps = (
     Colors and BackgroundColor
    **/
   ~color=?,
-  ~colorScheme=?,
   ~backgroundColor=?,
   ~bgColor=?,
   ~opacity=?,
@@ -672,7 +670,6 @@ let makeProps = (
     /**
       Component Props {ButtonGroup}
      **/
-    ~isTruncated=?isTruncated->Bool.fromOption,
     ~isAttached=?isAttached->Bool.fromOption,
     ~isDisabled=?isDisabled->Bool.fromOption,
     ~size=?size->Button.Size.fromOption,
@@ -703,7 +700,6 @@ let makeProps = (
       Colors and Background Color
      **/
     ~color=?color->Color.fromOption,
-    ~colorScheme=?colorScheme->ColorScheme.fromOption,
     ~backgroundColor=?bgColor->withShorthand(backgroundColor)->BackgroundColor.fromOption,
     ~opacity=?opacity->Opacity.fromOption,
     /**

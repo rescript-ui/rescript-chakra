@@ -373,18 +373,6 @@ module Opacity = {
 
 module BackgroundColor = Color
 
-module ColorScheme = {
-  open Chakra__AtomicTypes
-
-  let rec identity = x =>
-    switch x {
-    | #...ColorScheme.t as cs => cs->ColorScheme.toString->Identity.fromString
-    | #array(arr) => arr->arrayMap(identity)->Identity.fromArray
-    }
-
-  let fromOption = o => o->optionMap(identity)
-}
-
 module BorderStyle = {
   open Chakra__AtomicTypes
   let toString = x =>
@@ -982,6 +970,8 @@ module Stat = {
     let fromOption = o => o->optionMap(identity)
   }
 }
+
+include Chakra__Theme
 
 module Pseudo = {
   @ocaml.docs(

@@ -25,18 +25,37 @@ module Slide = {
     ~unmountOnExit: bool=?,
   ) => React.element = "Slide"
 }
-/**
-TODO ~offsetX ~offsetY
 module SlideFade = {
   open Chakra__MakeProps
   @react.component @module("@chakra-ui/react")
   external make: (
     ~children: React.element=?,
     ~offsetX: Identity.t=?,
+    ~offsetY: Identity.t=?,
     ~in_: bool=?,
     ~reverse: bool=?,
     ~unmountOnExit: bool=?,
   ) => React.element = "SlideFade"
-  let makeProps = (~offsetX=?,) => makeProps(~offsetX=?
+  let makeProps = (~offsetX=?, ~offsetY=?) =>
+    makeProps(
+      ~offsetX=?offsetX->StringOrNumber.fromOption,
+      ~offsetY=?offsetY->StringOrNumber.fromOption,
+    )
 }
-*/
+module Collapse = {
+  open Chakra__MakeProps
+  @react.component @module("@chakra-ui/react")
+  external make: (
+    ~children: React.element=?,
+    ~startingHeight: Identity.t=?,
+    ~endingHeight: Identity.t=?,
+    ~animateOpacity: bool=?,
+    ~in_: bool=?,
+    ~unmountOnExit: bool=?,
+  ) => React.element = "Collapse"
+  let makeProps = (~startingHeight=?, ~endingHeight=?) =>
+    makeProps(
+      ~startingHeight=?startingHeight->StringOrNumber.fromOption,
+      ~endingHeight=?endingHeight->StringOrNumber.fromOption,
+    )
+}

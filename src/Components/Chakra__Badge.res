@@ -7,8 +7,8 @@ external make: (
     Component Props {Badge}
     @see <https://chakra-ui.com/docs/data-display/badge#props>
    **/
-  ~as_: string=?,
-  ~isTruncated: Identity.t=?,
+  @as("as") ~_as: string=?,
+  ~isTruncated: bool=?,
   ~variant: Identity.t=?,
   /**
     Margin and Padding
@@ -36,7 +36,7 @@ external make: (
     Colors and BackgroundColor
     @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
    **/
-  ~colorScheme: Identity.t=?,
+  ~colorScheme: ColorScheme.t=?,
   ~color: Identity.t=?,
   ~backgroundColor: Identity.t=?,
   ~opacity: Identity.t=?,
@@ -452,7 +452,6 @@ let makeProps = (
   /**
     Component Props {Badge}
    **/
-  ~isTruncated=?,
   ~variant=?,
   /**
     Margin and Padding
@@ -493,7 +492,6 @@ let makeProps = (
     Colors and BackgroundColor
    **/
   ~color=?,
-  ~colorScheme=?,
   ~backgroundColor=?,
   ~bgColor=?,
   ~opacity=?,
@@ -665,7 +663,6 @@ let makeProps = (
     /**
       Component Props {Badge}
      **/
-    ~isTruncated=?isTruncated->Bool.fromOption,
     ~variant=?variant->Badge.Variant.fromOption,
     /**
       Margin and Padding
@@ -692,7 +689,6 @@ let makeProps = (
       Colors and Background Color
      **/
     ~color=?color->Color.fromOption,
-    ~colorScheme=?colorScheme->ColorScheme.fromOption,
     ~backgroundColor=?bgColor->withShorthand(backgroundColor)->BackgroundColor.fromOption,
     ~opacity=?opacity->Opacity.fromOption,
     /**
