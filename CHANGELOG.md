@@ -1,3 +1,23 @@
+# [1.2.0-next.2](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.1...v1.2.0-next.2) (2021-06-28)
+
+
+### Bug Fixes
+
+* **props:** fix invalid props for all Components ([1703258](https://github.com/ri7nz/rescript-chakra/commit/170325885b7a23fd3f333700505ba78c07d6b70d))
+
+
+### Code Refactoring
+
+* **AtomicTypes:** move ColorScheme module from AtomicTypes to Chakra__Theme module ([ffb850c](https://github.com/ri7nz/rescript-chakra/commit/ffb850cb1588b65c200c9fdbedd5af6e0233f375))
+
+
+### Features
+
+* **MakeProps:** add sub-modules in MakeProps for handle object-fit, noOfLines, viewBox, and multi-type(string-or-number). ([51a1924](https://github.com/ri7nz/rescript-chakra/commit/51a192426df328bf53aa47b75edc36cb3c7e5cc6))
+* **Media:** add bindin for Icon and Image Component ([762108e](https://github.com/ri7nz/rescript-chakra/commit/762108e3f7da13f863fefea976237a537d993028))
+* **Others:** add binding for Portal Component ([68e9679](https://github.com/ri7nz/rescript-chakra/commit/68e967915c9a09d1a7978747438571f8cfe102ac))
+* **Typography:** add binding for Heading and Text ([9f707a2](https://github.com/ri7nz/rescript-chakra/commit/9f707a2b27b0e1b8ce9d182903711094bd0937e3))
+
 # [1.2.0-next.1](https://github.com/ri7nz/rescript-chakra/compare/v1.1.0...v1.2.0-next.1) (2021-06-27)
 
 
