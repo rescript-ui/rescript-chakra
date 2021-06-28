@@ -72,8 +72,6 @@ module Kbd = Chakra__Kbd
 
 // ### Typography
 // TODO Typography
-// module Text = Chakra__Text;
-// module Heading = Chakra__Heading;
 module Text = Chakra__Text
 module Heading = Chakra__Heading
 
@@ -101,14 +99,15 @@ module Heading = Chakra__Heading
 // ### Media and Icons
 // TODO Media and Icons
 // module Avatar = Chakra__Avatar;
-// module Icon = Chakra__Icon;
-// module Image = Chakra__Image;
+module Icon = Chakra__Icon
+module Image = Chakra__Image
 
 // ### Others
 // TODO Others
 // module Portal = Chakra__Portal;
 // module Transitions = Chakra__Transitions;
 
+include Chakra__Transitions
 // ### Hooks
 // TODO Hooks
 // let useBoolean = Chakra__Hooks.useBoolean;

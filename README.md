@@ -210,8 +210,8 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
 
 ### Media and Icons
 - [ ] Avatar
-- [ ] Icon
-- [ ] Image
+- [x] Icon
+- [x] Image
 
 ### Others
 - [ ] Portal
