@@ -97,8 +97,8 @@ module Heading = Chakra__Heading
 // module LinkOverlay = Chakra__LinkOverlay;
 
 // ### Media and Icons
-// TODO Media and Icons
-// module Avatar = Chakra__Avatar;
+module Avatar = Chakra__Avatar
+module AvatarGroup = Chakra__AvatarGroup
 module Icon = Chakra__Icon
 module Image = Chakra__Image
 

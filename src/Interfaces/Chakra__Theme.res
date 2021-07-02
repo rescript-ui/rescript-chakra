@@ -44,7 +44,9 @@ module ColorScheme = {
   ]
 }
 module Size = {
+  type full = [#full]
   type xs = [#xs]
+  type xs2 = [@as("2xs") #xs2]
   type sm = [#sm]
   type md = [#md]
   type lg = [#lg]
@@ -63,6 +65,18 @@ module Size = {
       | xl2
       | xl3
       | xl4
+    ]
+  }
+  module Avatar = {
+    type t = [
+      | sm
+      | md
+      | lg
+      | xl
+      | xl2
+      | full
+      | xs2
+      | xs
     ]
   }
 }
