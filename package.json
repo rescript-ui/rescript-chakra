@@ -1,6 +1,6 @@
 {
   "name": "rescript-chakra",
-  "version": "1.2.0-next.2",
+  "version": "1.2.0-next.3",
   "description": "⚡️ ReScript bindings for @chakra-ui/react",
   "keywords": [
     "rescript",

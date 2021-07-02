@@ -1,3 +1,10 @@
+# [1.2.0-next.3](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.2...v1.2.0-next.3) (2021-07-02)
+
+
+### Features
+
+* **Media:** add binding component Avatar & AvatarGroup. ([a96e39e](https://github.com/ri7nz/rescript-chakra/commit/a96e39e31a151ac3926fa8eed20c8ae170a02f49))
+
 # [1.2.0-next.2](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.1...v1.2.0-next.2) (2021-06-28)
 
 
