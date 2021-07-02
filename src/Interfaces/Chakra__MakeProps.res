@@ -1031,6 +1031,7 @@ module ViewBox = {
 }
 
 include Chakra__Theme
+module HTML = Chakra__HTML
 
 module Pseudo = {
   @ocaml.docs(
