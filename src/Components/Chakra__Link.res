@@ -4,6 +4,18 @@ open Chakra__MakeProps
 external make: (
   ~children: React.element=?,
   /**
+    Generic HTML Element <a/>
+   **/
+  ~download: string=?,
+  ~href: string=?,
+  ~hrefLang: string=?,
+  ~ping: string=?,
+  ~rel: HTML.LinkTypes.t=?,
+  ~referrerpolicy: HTML.ReferrerPolicy.t=?,
+  ~target: HTML.Target.t=?,
+  ~_type: string=?,
+  ~isExternal: bool=?,
+  /**
     Component Props {Link}
    **/
   ~_as: string=?,
