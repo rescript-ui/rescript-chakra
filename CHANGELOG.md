@@ -1,3 +1,11 @@
+# [1.2.0-next.4](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.3...v1.2.0-next.4) (2021-07-02)
+
+
+### Features
+
+* **Interfaces:** add binding for some HTML specification ([0b1040e](https://github.com/ri7nz/rescript-chakra/commit/0b1040e900a6097c016fbf782134e28669497914))
+* **Navigation:** add binding for component navigation ([4428ec8](https://github.com/ri7nz/rescript-chakra/commit/4428ec87d0d2c66e3f6ec09142a26cd569878588))
+
 # [1.2.0-next.3](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.2...v1.2.0-next.3) (2021-07-02)
 
 
