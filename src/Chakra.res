@@ -91,10 +91,13 @@ module Heading = Chakra__Heading
 // module Visually Hidden = Chakra__Hidden;
 
 // ### Navigation
-// TODO Navigation
-// module Breadcrumb = Chakra__Breadcrumb;
-// module Link = Chakra__Link;
-// module LinkOverlay = Chakra__LinkOverlay;
+module Breadcrumb = Chakra__Breadcrumb
+module BreadcrumbItem = Chakra__BreadcrumbItem
+module BreadcrumbLink = Chakra__BreadcrumbLink
+module BreadcrumbSeparator = Chakra__BreadcrumbSeparator
+module Link = Chakra__Link
+module LinkOverlay = Chakra__LinkOverlay
+module LinkBox = Chakra__LinkBox
 
 // ### Media and Icons
 module Avatar = Chakra__Avatar
