@@ -1,3 +1,10 @@
+# [1.2.0-next.5](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.4...v1.2.0-next.5) (2021-07-02)
+
+
+### Bug Fixes
+
+* **Link:** missing anchor HTML element attributes ([3b4477d](https://github.com/ri7nz/rescript-chakra/commit/3b4477d53889ef597a17ce05724bf024d3d998a6))
+
 # [1.2.0-next.4](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.3...v1.2.0-next.4) (2021-07-02)
 
 
