@@ -409,6 +409,7 @@ let makeProps = (
   /**
     Component Props {TagCloseButton}
    **/
+   ~isDisabled=?,
   /**
     Margin and Padding
    **/
@@ -615,6 +616,7 @@ let makeProps = (
     /**
       Component Props {TagCloseButton}
      **/
+     ~isDisabled=?isDisabled->Bool.fromOption,
     /**
       Margin and Padding
      **/
