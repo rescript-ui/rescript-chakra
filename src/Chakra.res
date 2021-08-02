@@ -55,11 +55,12 @@ module CloseButton = Chakra__CloseButton
 module Code = Chakra__Code
 module Divider = Chakra__Divider
 module Kbd = Chakra__Kbd
+module Tag = Chakra__Tag
 // TODO Data Display
 // module List = Chakra__List;
 // module Stat = Chakra__Stat;
 // module Table = Chakra__Table;
-// module Tag = Chakra__Tag;
+
 
 // ### Feedback
 // TODO Feedback
