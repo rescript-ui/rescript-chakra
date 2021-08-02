@@ -9,7 +9,7 @@ external make: (
   ~_as: string=?,
   ~isTruncated: bool=?,
   ~colorScheme: ColorScheme.t=?,
-  ~size: string=?,
+  ~sizes: Identity.t=?,
   ~variant: Identity.t=?,
   /**
     Margin and Padding
@@ -411,6 +411,7 @@ let makeProps = (
     Component Props {Tag}
    **/
    ~variant=?,
+   ~sizes=?,
   /**
     Margin and Padding
    **/
@@ -618,6 +619,7 @@ let makeProps = (
       Component Props {Tag}
      **/
     ~variant=?variant->Badge.Variant.fromOption,
+    ~sizes=?sizes->Sizes.fromOption,
     /**
       Margin and Padding
      **/
