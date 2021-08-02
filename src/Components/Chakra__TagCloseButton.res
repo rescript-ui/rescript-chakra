@@ -8,7 +8,7 @@ external make: (
    **/
   ~_as: string=?,
   ~isTruncated: bool=?,
-  ~isDisabled: Identity.t=?,
+  ~isDisabled: bool=?,
   ~size: Identity.t=?,
   /**
     Margin and Padding
@@ -409,7 +409,6 @@ let makeProps = (
   /**
     Component Props {TagCloseButton}
    **/
-   ~isDisabled=?,
   /**
     Margin and Padding
    **/
@@ -616,7 +615,6 @@ let makeProps = (
     /**
       Component Props {TagCloseButton}
      **/
-     ~isDisabled=?isDisabled->Bool.fromOption,
     /**
       Margin and Padding
      **/
