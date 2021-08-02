@@ -56,6 +56,10 @@ module Code = Chakra__Code
 module Divider = Chakra__Divider
 module Kbd = Chakra__Kbd
 module Tag = Chakra__Tag
+module TagCloseButton = Chakra__TagCloseButton
+module TagLabel = Chakra__TagLabel
+module TagLeftIcon = Chakra__TagLeftIcon
+module TagRightIcon = Chakra__TagRightIcon
 // TODO Data Display
 // module List = Chakra__List;
 // module Stat = Chakra__Stat;
