@@ -79,4 +79,11 @@ module Size = {
       | xs
     ]
   }
+  module Tag = {
+    type t = [
+      | sm
+      | md
+      | lg
+    ]
+  }
 }
