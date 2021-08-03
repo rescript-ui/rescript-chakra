@@ -266,132 +266,132 @@ external make: (
     ReactEvent Clipboard
     @see <https://reactjs.org/docs/events.html#clipboard-events>
    **/
-  ~onCopy: ReactEvent.Clipboard.t=?,
-  ~onCut: ReactEvent.Clipboard.t=?,
-  ~onPaste: ReactEvent.Clipboard.t=?,
+  ~onCopy: ReactEvent.Clipboard.t => unit=?,
+  ~onCut: ReactEvent.Clipboard.t => unit=?,
+  ~onPaste: ReactEvent.Clipboard.t => unit=?,
   /**
     ReactEvent Composition
     @see <https://reactjs.org/docs/events.html#composition-events>
    **/
-  ~onCompositionEnd: ReactEvent.Composition.t=?,
-  ~onCompositionStart: ReactEvent.Composition.t=?,
-  ~onCompositionUpdate: ReactEvent.Composition.t=?,
+  ~onCompositionEnd: ReactEvent.Composition.t => unit=?,
+  ~onCompositionStart: ReactEvent.Composition.t => unit=?,
+  ~onCompositionUpdate: ReactEvent.Composition.t => unit=?,
   /**
     ReactEvent Keyboard
     @see <https://reactjs.org/docs/events.html#keyboard-events>
    **/
-  ~onKeyDown: ReactEvent.Keyboard.t=?,
-  ~onKeyPress: ReactEvent.Keyboard.t=?,
-  ~onKeyUp: ReactEvent.Keyboard.t=? /**
+  ~onKeyDown: ReactEvent.Keyboard.t => unit=?,
+  ~onKeyPress: ReactEvent.Keyboard.t => unit=?,
+  ~onKeyUp: ReactEvent.Keyboard.t => unit=? /**
     ReactEvent Focus
     @see <https://reactjs.org/docs/events.html#focus-events>
    **/,
-  ~onFocus: ReactEvent.Focus.t=?,
-  ~onBlur: ReactEvent.Focus.t=?,
+  ~onFocus: ReactEvent.Focus.t => unit=?,
+  ~onBlur: ReactEvent.Focus.t => unit=?,
   /**
     ReactEvent Form 
     @see <https://reactjs.org/docs/events.html#form-events>
    **/
-  ~onChange: ReactEvent.Form.t=?,
-  ~onInput: ReactEvent.Form.t=?,
-  ~onInvalid: ReactEvent.Form.t=?,
-  ~onReset: ReactEvent.Form.t=?,
-  ~onSubmit: ReactEvent.Form.t=?,
+  ~onChange: ReactEvent.Form.t => unit=?,
+  ~onInput: ReactEvent.Form.t => unit=?,
+  ~onInvalid: ReactEvent.Form.t => unit=?,
+  ~onReset: ReactEvent.Form.t => unit=?,
+  ~onSubmit: ReactEvent.Form.t => unit=?,
   /**
     ReactEvent Generic Events
     @see <https://reactjs.org/docs/events.html#generic-events>
     ISSUE: Not Implemented in @rescript/react for ReactEvent.Generic;
-    ~onError: ReactEvent.Generic.t=?,
-    ~onLoad: ReactEvent.Generic.t=?,
+    ~onError: ReactEvent.Generic.t => unit=?,
+    ~onLoad: ReactEvent.Generic.t => unit=?,
    **/
   /**
     ReactEvent Mouse
     @see <https://reactjs.org/docs/events.html#mouse-events>
    **/
-  ~onClick: ReactEvent.Mouse.t=?,
-  ~onContextMenu: ReactEvent.Mouse.t=?,
-  ~onDoubleClick: ReactEvent.Mouse.t=?,
-  ~onDrag: ReactEvent.Mouse.t=?,
-  ~onDragEnd: ReactEvent.Mouse.t=?,
-  ~onDragEnter: ReactEvent.Mouse.t=?,
-  ~onDragExit: ReactEvent.Mouse.t=?,
-  ~onDragLeave: ReactEvent.Mouse.t=?,
-  ~onDragOver: ReactEvent.Mouse.t=?,
-  ~onDragStart: ReactEvent.Mouse.t=?,
-  ~onDrop: ReactEvent.Mouse.t=?,
-  ~onMouseDown: ReactEvent.Mouse.t=?,
-  ~onMouseEnter: ReactEvent.Mouse.t=?,
-  ~onMouseLeave: ReactEvent.Mouse.t=?,
-  ~onMouseMove: ReactEvent.Mouse.t=?,
-  ~onMouseOut: ReactEvent.Mouse.t=?,
-  ~onMouseOver: ReactEvent.Mouse.t=?,
-  ~onMouseUp: ReactEvent.Mouse.t=?,
+  ~onClick: ReactEvent.Mouse.t => unit=?,
+  ~onContextMenu: ReactEvent.Mouse.t => unit=?,
+  ~onDoubleClick: ReactEvent.Mouse.t => unit=?,
+  ~onDrag: ReactEvent.Mouse.t => unit=?,
+  ~onDragEnd: ReactEvent.Mouse.t => unit=?,
+  ~onDragEnter: ReactEvent.Mouse.t => unit=?,
+  ~onDragExit: ReactEvent.Mouse.t => unit=?,
+  ~onDragLeave: ReactEvent.Mouse.t => unit=?,
+  ~onDragOver: ReactEvent.Mouse.t => unit=?,
+  ~onDragStart: ReactEvent.Mouse.t => unit=?,
+  ~onDrop: ReactEvent.Mouse.t => unit=?,
+  ~onMouseDown: ReactEvent.Mouse.t => unit=?,
+  ~onMouseEnter: ReactEvent.Mouse.t => unit=?,
+  ~onMouseLeave: ReactEvent.Mouse.t => unit=?,
+  ~onMouseMove: ReactEvent.Mouse.t => unit=?,
+  ~onMouseOut: ReactEvent.Mouse.t => unit=?,
+  ~onMouseOver: ReactEvent.Mouse.t => unit=?,
+  ~onMouseUp: ReactEvent.Mouse.t => unit=?,
   /**
     ReactEvent Pointer
     @see <https://reactjs.org/docs/events.html#pointer-events>
    **/
-  ~onPointerDown: ReactEvent.Pointer.t=?,
-  ~onPointerMove: ReactEvent.Pointer.t=?,
-  ~onPointerUp: ReactEvent.Pointer.t=?,
-  ~onPointerCancel: ReactEvent.Pointer.t=?,
-  ~onGotPointerCapture: ReactEvent.Pointer.t=?,
-  ~onLostPointerCapture: ReactEvent.Pointer.t=?,
-  ~onPointerEnter: ReactEvent.Pointer.t=?,
-  ~onPointerLeave: ReactEvent.Pointer.t=?,
-  ~onPointerOver: ReactEvent.Pointer.t=?,
-  ~onPointerOut: ReactEvent.Pointer.t=?,
+  ~onPointerDown: ReactEvent.Pointer.t => unit=?,
+  ~onPointerMove: ReactEvent.Pointer.t => unit=?,
+  ~onPointerUp: ReactEvent.Pointer.t => unit=?,
+  ~onPointerCancel: ReactEvent.Pointer.t => unit=?,
+  ~onGotPointerCapture: ReactEvent.Pointer.t => unit=?,
+  ~onLostPointerCapture: ReactEvent.Pointer.t => unit=?,
+  ~onPointerEnter: ReactEvent.Pointer.t => unit=?,
+  ~onPointerLeave: ReactEvent.Pointer.t => unit=?,
+  ~onPointerOver: ReactEvent.Pointer.t => unit=?,
+  ~onPointerOut: ReactEvent.Pointer.t => unit=?,
   /**
     ReactEvent Selection
     @see <https://reactjs.org/docs/events.html#selection-events>
    **/
-  ~onSelect: ReactEvent.Selection.t=?,
+  ~onSelect: ReactEvent.Selection.t => unit=?,
   /**
     ReactEvent Touch
     @see <https://reactjs.org/docs/events.html#touch-events>
    **/
-  ~onTouchCancel: ReactEvent.Touch.t=?,
-  ~onTouchEnd: ReactEvent.Touch.t=?,
-  ~onTouchMove: ReactEvent.Touch.t=?,
-  ~onTouchStart: ReactEvent.Touch.t=?,
+  ~onTouchCancel: ReactEvent.Touch.t => unit=?,
+  ~onTouchEnd: ReactEvent.Touch.t => unit=?,
+  ~onTouchMove: ReactEvent.Touch.t => unit=?,
+  ~onTouchStart: ReactEvent.Touch.t => unit=?,
   /**
     ReactEvent UI Events
     @see <https://reactjs.org/docs/events.html#ui-events>
    **/
-  ~onScroll: ReactEvent.UI.t=?,
+  ~onScroll: ReactEvent.UI.t => unit=?,
   /**
     ReactEvent Wheel
     @see <https://reactjs.org/docs/events.html#wheel-events>
    **/
-  ~onWheel: ReactEvent.Wheel.t=?,
+  ~onWheel: ReactEvent.Wheel.t => unit=?,
   /**
     ReactEvent Media
     @see <https://reactjs.org/docs/events.html#media-events>
    **/
-  ~onAbort: ReactEvent.Media.t=?,
-  ~onCanPlay: ReactEvent.Media.t=?,
-  ~onCanPlayThrough: ReactEvent.Media.t=?,
-  ~onDurationChange: ReactEvent.Media.t=?,
-  ~onEmptied: ReactEvent.Media.t=?,
-  ~onEncrypted: ReactEvent.Media.t=?,
-  ~onEnded: ReactEvent.Media.t=?,
-  // ~onError: ReactEvent.Media.t=?,
-  ~onLoadedData: ReactEvent.Media.t=?,
-  ~onLoadedMetadata: ReactEvent.Media.t=?,
-  ~onLoadStart: ReactEvent.Media.t=?,
-  ~onPause: ReactEvent.Media.t=?,
-  ~onPlay: ReactEvent.Media.t=?,
-  ~onPlaying: ReactEvent.Media.t=?,
-  ~onProgress: ReactEvent.Media.t=?,
-  ~onRateChange: ReactEvent.Media.t=?,
-  ~onSeeked: ReactEvent.Media.t=?,
-  ~onSeeking: ReactEvent.Media.t=?,
-  ~onStalled: ReactEvent.Media.t=?,
-  ~onSuspend: ReactEvent.Media.t=?,
-  ~onTimeUpdate: ReactEvent.Media.t=?,
-  ~onVolumeChange: ReactEvent.Media.t=?,
-  ~onWaiting: ReactEvent.Media.t=?,
-  ~onLoad: ReactEvent.Synthetic.t=?,
-  ~onError: ReactEvent.Synthetic.t=?,
+  ~onAbort: ReactEvent.Media.t => unit=?,
+  ~onCanPlay: ReactEvent.Media.t => unit=?,
+  ~onCanPlayThrough: ReactEvent.Media.t => unit=?,
+  ~onDurationChange: ReactEvent.Media.t => unit=?,
+  ~onEmptied: ReactEvent.Media.t => unit=?,
+  ~onEncrypted: ReactEvent.Media.t => unit=?,
+  ~onEnded: ReactEvent.Media.t => unit=?,
+  // ~onError: ReactEvent.Media.t => unit=?,
+  ~onLoadedData: ReactEvent.Media.t => unit=?,
+  ~onLoadedMetadata: ReactEvent.Media.t => unit=?,
+  ~onLoadStart: ReactEvent.Media.t => unit=?,
+  ~onPause: ReactEvent.Media.t => unit=?,
+  ~onPlay: ReactEvent.Media.t => unit=?,
+  ~onPlaying: ReactEvent.Media.t => unit=?,
+  ~onProgress: ReactEvent.Media.t => unit=?,
+  ~onRateChange: ReactEvent.Media.t => unit=?,
+  ~onSeeked: ReactEvent.Media.t => unit=?,
+  ~onSeeking: ReactEvent.Media.t => unit=?,
+  ~onStalled: ReactEvent.Media.t => unit=?,
+  ~onSuspend: ReactEvent.Media.t => unit=?,
+  ~onTimeUpdate: ReactEvent.Media.t => unit=?,
+  ~onVolumeChange: ReactEvent.Media.t => unit=?,
+  ~onWaiting: ReactEvent.Media.t => unit=?,
+  ~onLoad: ReactEvent.Synthetic.t => unit=?,
+  ~onError: ReactEvent.Synthetic.t => unit=?,
   /**
     ReactEvent Other
     @see <https://reactjs.org/docs/events.html#other-events>
@@ -401,9 +401,9 @@ external make: (
     ReactEvent Animation 
     @see <https://reactjs.org/docs/events.html#animation-events>
    **/
-  ~onAnimationStart: ReactEvent.Animation.t=?,
-  ~onAnimationEnd: ReactEvent.Animation.t=?,
-  ~onAnimationIteration: ReactEvent.Animation.t=?,
+  ~onAnimationStart: ReactEvent.Animation.t => unit=?,
+  ~onAnimationEnd: ReactEvent.Animation.t => unit=?,
+  ~onAnimationIteration: ReactEvent.Animation.t => unit=?,
 ) => React.element = "AvatarGroup"
 
 let makeProps = (
