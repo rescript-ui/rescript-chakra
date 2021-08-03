@@ -120,6 +120,7 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
   - [x] Circle
 - [x] Container
 - [x] Flex
+  - [ ] Spacer
 - [x] Grid
   - [ ] GridItem
 - [x] SimpleGrid
