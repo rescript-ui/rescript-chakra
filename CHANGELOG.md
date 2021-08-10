@@ -1,3 +1,15 @@
+# [1.2.0-next.6](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.5...v1.2.0-next.6) (2021-08-10)
+
+
+### Bug Fixes
+
+* **Components:** wrong type definition for ReactEvent.* ([87cc911](https://github.com/ri7nz/rescript-chakra/commit/87cc91105f7d068e56c6a71348bf9dd45fbc60c9))
+
+
+### Chores
+
+* **scripts:** add script for fix-event-type ([60a2188](https://github.com/ri7nz/rescript-chakra/commit/60a21885b84e898306a4da6ad299540130a47543))
+
 # [1.2.0-next.5](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.4...v1.2.0-next.5) (2021-07-02)
 
 
