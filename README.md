@@ -180,9 +180,11 @@ All of Style Props implementation is write in File:[Chakra__MakeProps.res](https
 ### Feedback
 - [ ] Alert
 - [ ] Circular Progress
-- [ ] Progress
-- [ ] Skeleton
-- [ ] Spinner
+- [x] Progress
+- [x] Skeleton
+  - [x] SkeletonText
+  - [x] SkeletonCircle
+- [x] Spinner
 - [ ] Toast
 
 ### Typography

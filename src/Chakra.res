@@ -65,9 +65,11 @@ module Kbd = Chakra__Kbd
 // TODO Feedback
 // module Alert = Chakra__Alert;
 // module Circular Progress = Chakra__Progress;
-// module Progress = Chakra__Progress;
-// module Skeleton = Chakra__Skeleton;
-// module Spinner = Chakra__Spinner;
+module Progress = Chakra__Progress
+module Skeleton = Chakra__Skeleton
+module SkeletonCircle = Chakra__SkeletonCircle
+module SkeletonText = Chakra__SkeletonText
+module Spinner = Chakra__Spinner
 // module Toast = Chakra__Toast;
 
 // ### Typography
