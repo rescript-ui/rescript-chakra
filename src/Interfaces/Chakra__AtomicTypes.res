@@ -2290,77 +2290,77 @@ module Breakpoints = {
 module Spaces = {
   type t = [
     | #px_
-    | #zero
-    | #zeroP
-    | #one
-    | #oneP
-    | #two
-    | #twoP
-    | #three
-    | #threeP
-    | #four
-    | #five
-    | #six
-    | #seven
-    | #eight
-    | #nine
-    | #ten
-    | #twelve
-    | #fourteen
-    | #sixteen
-    | #twenty
-    | #twentyfour
-    | #twentyeight
-    | #thirtytwo
-    | #thirtysix
-    | #fourty
-    | #fourtyfour
-    | #fourtyeight
-    | #fivetytwo
-    | #fivetysix
-    | #sixty
-    | #sixtyfour
-    | #seventytwo
-    | #eighty
-    | #ninetysix
+    | #0
+    | #"0.5"
+    | #1
+    | #"1.5"
+    | #2
+    | #"2.5"
+    | #3
+    | #"3.5"
+    | #4
+    | #5
+    | #6
+    | #7
+    | #8
+    | #9
+    | #10
+    | #12
+    | #14
+    | #16
+    | #20
+    | #24
+    | #28
+    | #32
+    | #36
+    | #40
+    | #44
+    | #48
+    | #52
+    | #56
+    | #60
+    | #64
+    | #72
+    | #80
+    | #96
   ]
 
   let toString = x =>
     switch x {
     | #px_ => "px"
-    | #zero => "0"
-    | #zeroP => "0.5"
-    | #one => "1"
-    | #oneP => "1.5"
-    | #two => "2"
-    | #twoP => "2.t"
-    | #three => "3"
-    | #threeP => "3.5"
-    | #four => "4"
-    | #five => "5"
-    | #six => "6"
-    | #seven => "7"
-    | #eight => "8"
-    | #nine => "9"
-    | #ten => "10"
-    | #twelve => "12"
-    | #fourteen => "14"
-    | #sixteen => "16"
-    | #twenty => "20"
-    | #twentyfour => "24"
-    | #twentyeight => "28"
-    | #thirtytwo => "32"
-    | #thirtysix => "36"
-    | #fourty => "40"
-    | #fourtyfour => "44"
-    | #fourtyeight => "48"
-    | #fivetytwo => "52"
-    | #fivetysix => "56"
-    | #sixty => "60"
-    | #sixtyfour => "64"
-    | #seventytwo => "72"
-    | #eighty => "80"
-    | #ninetysix => "96"
+    | #0 => "0"
+    | #"0.5" => "0.5"
+    | #1 => "1"
+    | #"1.5" => "1.5"
+    | #2 => "2"
+    | #"2.5" => "2.t"
+    | #3 => "3"
+    | #"3.5" => "3.5"
+    | #4 => "4"
+    | #5 => "5"
+    | #6 => "6"
+    | #7 => "7"
+    | #8 => "8"
+    | #9 => "9"
+    | #10 => "10"
+    | #12 => "12"
+    | #14 => "14"
+    | #16 => "16"
+    | #20 => "20"
+    | #24 => "24"
+    | #28 => "28"
+    | #32 => "32"
+    | #36 => "36"
+    | #40 => "40"
+    | #44 => "44"
+    | #48 => "48"
+    | #52 => "52"
+    | #56 => "56"
+    | #60 => "60"
+    | #64 => "64"
+    | #72 => "72"
+    | #80 => "80"
+    | #96 => "96"
     }
 }
 

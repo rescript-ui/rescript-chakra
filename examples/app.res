@@ -15,11 +15,11 @@ module MarginAndProps = {
   @react.component
   let make = () => <>
     // m={2} refers to the value of `theme.space[2]`
-    <Box m={#two}> {"Tomato"->React.string} </Box>
+    <Box m={#2}> {"Tomato"->React.string} </Box>
     // You can also use custom values
     <Box maxW={#px(960)} mx=#auto />
     // sets margin `8px` on all viewports and `16px` from the first breakpoint and up
-    <Box m={#array([#two, #three])} />
+    <Box m={#array([#2, #3])} />
   </>
 }
 /**
@@ -30,13 +30,13 @@ module LayoutWidthHeight = {
   @react.component
   let make = () => <>
     // verbose
-    <Box width=#percent(100.) height={#thirtytwo} />
+    <Box width=#percent(100.) height={#32} />
     // shorthand
     <Box w=#percent(100.) h=#px(32) />
     // use theme sizing
     <Box boxSize=#sm />
     // width `50%`
-    <Box w=#zeroP />
+    <Box w=#"0.5" />
     // width `256px`
     <Box w=#px(256) />
     // width `'40px'`
