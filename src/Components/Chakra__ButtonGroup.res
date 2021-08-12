@@ -9,7 +9,7 @@ external make: (
   ~_as: string=?,
   ~isTruncated: bool=?,
   ~isAttached: Identity.t=?,
-  ~isDisabled: Identity.t=?,
+  ~isDisabled: bool=?,
   ~size: Identity.t=?,
   ~spacing: Identity.t=?,
   ~variant: Identity.t=?,
@@ -276,7 +276,6 @@ external make: (
   @as("_placeholder") ~_placeholder: Pseudo.t=?,
   @as("_fullScreen") ~_fullScreen: Pseudo.t=?,
   @as("_selection") ~_selection: Pseudo.t=?,
-
   /**
     TODO
     Other Props 
@@ -456,7 +455,6 @@ let makeProps = (
     Component Props {ButtonGroup}
    **/
   ~isAttached=?,
-  ~isDisabled=?,
   ~size=?,
   ~spacing=?,
   ~variant=?,
@@ -671,7 +669,6 @@ let makeProps = (
       Component Props {ButtonGroup}
      **/
     ~isAttached=?isAttached->Bool.fromOption,
-    ~isDisabled=?isDisabled->Bool.fromOption,
     ~size=?size->Button.Size.fromOption,
     ~spacing=?spacing->Margin.fromOption,
     ~variant=?variant->Button.Variant.fromOption,
