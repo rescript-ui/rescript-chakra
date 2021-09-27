@@ -79,4 +79,12 @@ module Size = {
       | xs
     ]
   }
+  module Select = {
+    type t = [
+      | xs
+      | sm
+      | md
+      | lg
+    ]
+  }
 }

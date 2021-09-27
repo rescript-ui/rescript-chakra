@@ -19,8 +19,8 @@ external make: (
   ~isReadOnly: bool=?,
   ~isRequired: bool=?,
   ~rootProps: bool=?,
-  ~size: string=?,
-  ~variant: string=?,
+  ~size: Size.Select.t=?,
+  ~variant: Identity.t=?,
   /**
     Margin and Padding
     @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding>
@@ -420,6 +420,8 @@ let makeProps = (
   /**
     Component Props {Select}
    **/
+
+  ~variant=?,
   /**
     Margin and Padding
    **/
@@ -626,6 +628,7 @@ let makeProps = (
     /**
       Component Props {Select}
      **/
+     ~variant=>?variant->Select.Variant.fromOption
     /**
       Margin and Padding
      **/
