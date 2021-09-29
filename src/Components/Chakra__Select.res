@@ -420,7 +420,9 @@ let makeProps = (
   /**
     Component Props {Select}
    **/
-
+  ~errorBorderColor=?,
+  ~focusBorderColor=?,
+  ~iconColor=?,
   ~variant=?,
   /**
     Margin and Padding
@@ -628,6 +630,9 @@ let makeProps = (
     /**
       Component Props {Select}
      **/
+    ~errorBorderColor=?color->Color.fromOption,
+    ~focusBorderColor=?color->Color.fromOption,
+    ~iconColor=?color->Color.fromOption,
     ~variant=?variant->Select.Variant.fromOption,
     /**
       Margin and Padding
