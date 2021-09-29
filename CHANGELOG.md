@@ -1,3 +1,11 @@
+# [1.2.0-next.7](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.6...v1.2.0-next.7) (2021-09-29)
+
+
+### Features
+
+* **Select:** add bindings for select ([#17](https://github.com/ri7nz/rescript-chakra/issues/17)) ([26e9b43](https://github.com/ri7nz/rescript-chakra/commit/26e9b43e1451aa978893da8f9df360f33743bde9))
+* **Select:** fix syntax ([ba061dd](https://github.com/ri7nz/rescript-chakra/commit/ba061dd16a7cd63842ba6718c1b71b5a980744cd))
+
 # [1.2.0-next.6](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.5...v1.2.0-next.6) (2021-08-10)
 
 
