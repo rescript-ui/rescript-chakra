@@ -628,7 +628,7 @@ let makeProps = (
     /**
       Component Props {Select}
      **/
-     ~variant=>?variant->Select.Variant.fromOption
+    ~variant=?variant->Select.Variant.fromOption,
     /**
       Margin and Padding
      **/
