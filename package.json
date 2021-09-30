@@ -59,7 +59,7 @@
       "prettier --write"
     ],
     "*.{res,resi}": [
-      "bsrefmt --in-place"
+      "rescript format"
     ]
   },
   "devDependencies": {
