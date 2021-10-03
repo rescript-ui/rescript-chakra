@@ -4,15 +4,15 @@ open Chakra__MakeProps
 external make: (
   ~children: React.element=?,
   /**
-    Component Props {ButtonGroup}
+    Component Props {Spinner}
    **/
   ~_as: string=?,
   ~isTruncated: bool=?,
-  ~isAttached: Identity.t=?,
-  ~isDisabled: bool=?,
-  ~size: Identity.t=?,
-  ~spacing: Identity.t=?,
-  ~variant: Identity.t=?,
+  ~emptyColor: string=?,
+  ~label: string=?,
+  ~size: Chakra__Theme.Size.Spinner.t=?,
+  ~thickness: string=?,
+  ~speed: string=?,
   /**
     Margin and Padding
     @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding>
@@ -191,50 +191,8 @@ external make: (
   ~textShadow: Identity.t=?,
   ~boxShadow: Identity.t=?,
   /**
-    TODO
     Pseudo
     @see <https://chakra-ui.com/docs/features/style-props#pseudo>
-
-  _hover
-  _active
-  _focus
-  _highlighted
-  _focusWithin
-  _focusVisible
-  _disabled
-  _readOnly
-  _before
-  _after
-  _empty
-  _expanded
-  _checked
-  _grabbed
-  _pressed
-  _invalid
-  _valid
-  _loading
-  _selected
-  _hidden
-  _autofill
-  _even
-  _odd
-  _first
-  _last
-  _notFirst
-  _notLast
-  _visited
-  _activeLink
-  _activeStep
-  _indeterminate
-  _groupHover
-  _groupFocus
-  _groupActive
-  _groupDisabled
-  _groupInvalid
-  _groupChecked
-  _placeholder
-  _fullScreen
-  _selection
    **/
   @as("_hover") ~_hover: Pseudo.t=?,
   @as("_active") ~_active: Pseudo.t=?,
@@ -448,16 +406,13 @@ external make: (
   ~onAnimationStart: ReactEvent.Animation.t => unit=?,
   ~onAnimationEnd: ReactEvent.Animation.t => unit=?,
   ~onAnimationIteration: ReactEvent.Animation.t => unit=?,
-) => React.element = "ButtonGroup"
+) => React.element = "Spinner"
 
 let makeProps = (
   /**
-    Component Props {ButtonGroup}
+    Component Props {Spinner}
    **/
-  ~isAttached=?,
-  ~size=?,
-  ~spacing=?,
-  ~variant=?,
+  ~emptyColor=?,
   /**
     Margin and Padding
    **/
@@ -655,10 +610,6 @@ let makeProps = (
   ~boxShadow=?,
   /**
     TODO
-    Pseudo
-   **/
-  /**
-    TODO
     Other Props
    **/
   ~fill=?,
@@ -666,12 +617,9 @@ let makeProps = (
 ) =>
   makeProps(
     /**
-      Component Props {ButtonGroup}
+      Component Props {Spinner}
      **/
-    ~isAttached=?isAttached->Bool.fromOption,
-    ~size=?size->Button.Size.fromOption,
-    ~spacing=?spacing->Margin.fromOption,
-    ~variant=?variant->Button.Variant.fromOption,
+    ~emptyColor=?emptyColor->Belt.Option.map(Chakra__AtomicTypes.Colors.toString),
     /**
       Margin and Padding
      **/
@@ -840,10 +788,6 @@ let makeProps = (
     **/
     ~textShadow=?textShadow->TextShadow.fromOption,
     ~boxShadow=?boxShadow->BoxShadow.fromOption,
-    /**
-      TODO
-      Pseudo
-     **/
     /**
       TODO
       Other Props

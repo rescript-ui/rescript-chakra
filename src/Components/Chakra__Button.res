@@ -10,7 +10,7 @@ external make: (
   ~isTruncated: bool=?,
   ~iconSpacing: Identity.t=?,
   ~isActive: Identity.t=?,
-  ~isDisabled: Identity.t=?,
+  ~isDisabled: bool=?,
   ~isFullWidth: Identity.t=?,
   ~isLoading: Identity.t=?,
   ~loadingText: Identity.t=?,
@@ -283,7 +283,6 @@ external make: (
   @as("_placeholder") ~_placeholder: Pseudo.t=?,
   @as("_fullScreen") ~_fullScreen: Pseudo.t=?,
   @as("_selection") ~_selection: Pseudo.t=?,
-
   /**
     TODO
     Other Props 
@@ -464,7 +463,6 @@ let makeProps = (
    **/
   ~iconSpacing=?,
   ~isActive=?,
-  ~isDisabled=?,
   ~isFullWidth=?,
   ~isLoading=?,
   ~loadingText=?,
@@ -683,7 +681,6 @@ let makeProps = (
      **/
     ~iconSpacing=?iconSpacing->Margin.fromOption,
     ~isActive=?isActive->Bool.fromOption,
-    ~isDisabled=?isDisabled->Bool.fromOption,
     ~isFullWidth=?isFullWidth->Bool.fromOption,
     ~isLoading=?isLoading->Bool.fromOption,
     ~loadingText=?loadingText->Text.fromOption,
