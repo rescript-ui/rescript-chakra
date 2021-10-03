@@ -1,6 +1,9 @@
-# rescript-chakra
-
-> ReScript binding for React Chakra-UI.
+<p align="center">
+  <img src="./rescript-chakra.png" />
+  <br />
+  <br />
+  <a href="#installation">Installation</a> // <a href="#example">Example</a> // <a href="#contribution">Contribution</a> // <a href="#acknowledgement">Acknowledgement</a>
+</p>
 
 ## ToC
 
@@ -81,11 +84,11 @@ open Chakra
 @react.component
 let make = () => <>
   // m={2} refers to the value of `theme.space[2]`
-  <Box m={#two}> {"Tomato"->React.string} </Box>
+  <Box m={#2}> {"Tomato"->React.string} </Box>
   // You can also use custom values
   <Box maxW={#px(960)} mx=#auto />
   // sets margin `8px` on all viewports and `16px` from the first breakpoint and up
-  <Box m={#array([#two, #three])} />
+  <Box m={#array([#2, #3])} />
 </>
 ```
 
