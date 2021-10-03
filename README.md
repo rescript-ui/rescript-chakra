@@ -188,13 +188,16 @@ All of Style Props implementation is write in File:[Chakra\_\_MakeProps.res](htt
 ### Feedback
 
 - [ ] Alert
-- [ ] Circular Progress
+- [x] Circular Progress
+  - [x] Circular Progress Label
 - [x] Progress
 - [x] Skeleton
   - [x] SkeletonText
   - [x] SkeletonCircle
 - [x] Spinner
 - [x] Toast
+  - [x] useToast
+  - [x] createStandaloneToast
 
 ### Typography
 

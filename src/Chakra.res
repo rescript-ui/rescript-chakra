@@ -64,7 +64,8 @@ module Kbd = Chakra__Kbd
 // ### Feedback
 // TODO Feedback
 // module Alert = Chakra__Alert;
-// module Circular Progress = Chakra__Progress;
+module CircularProgress = Chakra__CircularProgress
+module CircularProgressLabel = Chakra__CircularProgressLabel
 module Progress = Chakra__Progress
 module Skeleton = Chakra__Skeleton
 module SkeletonCircle = Chakra__SkeletonCircle
