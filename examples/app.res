@@ -108,23 +108,33 @@ module Background = {
 module Pseudo = {
   open Chakra
   @react.component
-  let make = () => <>
-    // :hover style
-    <Button colorScheme=#teal _hover={pseudo(~background=#white, ~color=#teal500, ())}>
-      {"Hover me"->React.string}
-    </Button>
-    // apply :hover over parent element
-    // TODO props {role}
-    // <Box
-    //   role="group"
-    // >
-    //   <Box
-    //     _hover={{ fontWeight: 'semibold' }}
-    //     _groupHover={{ color: 'tomato' }}
-    //   >
-    //   </Box>
-    // </Box>
-  </>
+  let make = () => {
+    let toast = useToast()
+    let toast2 = createStandaloneToast()
+    <>
+      // :hover style
+      <Button
+        onClick={_ => {
+          let _ = toast(Toast.config(~id="ChakraToast", ()))
+          let _ = toast2(Toast.config(~id="ChakraToastCreateStandaloneToast", ()))
+        }}
+        colorScheme=#teal
+        _hover={pseudo(~background=#white, ~color=#teal500, ())}>
+        {"Hover me"->React.string}
+      </Button>
+      // apply :hover over parent element
+      // TODO props {role}
+      // <Box
+      //   role="group"
+      // >
+      //   <Box
+      //     _hover={{ fontWeight: 'semibold' }}
+      //     _groupHover={{ color: 'tomato' }}
+      //   >
+      //   </Box>
+      // </Box>
+    </>
+  }
 }
 module App = {
   open Chakra

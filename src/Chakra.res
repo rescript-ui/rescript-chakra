@@ -70,7 +70,7 @@ module Skeleton = Chakra__Skeleton
 module SkeletonCircle = Chakra__SkeletonCircle
 module SkeletonText = Chakra__SkeletonText
 module Spinner = Chakra__Spinner
-// module Toast = Chakra__Toast;
+module Toast = Chakra__Toast
 
 // ### Typography
 // TODO Typography
@@ -111,6 +111,8 @@ module Image = Chakra__Image
 module Portal = Chakra__Portal
 include Chakra__Transitions
 // ### Hooks
+let useToast = Chakra__Toast.useToast
+let createStandaloneToast = Chakra__Toast.createStandaloneToast
 // TODO Hooks
 // let useBoolean = Chakra__Hooks.useBoolean;
 // let useBreakpointValue = Chakra__Hooks.useBreakpointValue;
