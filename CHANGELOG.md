@@ -1,3 +1,9 @@
+# [1.2.0-next.9](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.8...v1.2.0-next.9) (2021-10-03)
+
+### Features
+
+- **Feedback:** add component binding for feedback ([#16](https://github.com/ri7nz/rescript-chakra/issues/16)) ([e68c2cb](https://github.com/ri7nz/rescript-chakra/commit/e68c2cb6b7fe3c4ae91953bc9c95a2f37028d113))
+
 # [1.2.0-next.8](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.7...v1.2.0-next.8) (2021-10-03)
 
 ### Bug Fixes
