@@ -970,6 +970,20 @@ module Divider = {
   }
 }
 
+module Select = {
+  module Variant = {
+    let rec identity = x =>
+      switch x {
+      | #outline => "outline"->Identity.fromString
+      | #filled => "filled"->Identity.fromString
+      | #flushed => "flushed"->Identity.fromString
+      | #unstyled => "unstyled"->Identity.fromString
+      | #array(arr) => arr->arrayMap(identity)->Identity.fromArray
+      }
+    let fromOption = o => o->optionMap(identity)
+  }
+}
+
 module Stat = {
   module Size = {
     let rec identity = x =>
@@ -993,7 +1007,7 @@ module StringOrNumber = {
   let fromOption = o => o->optionMap(identity)
 }
 /**
-  Object fit module 
+  Object fit module
  */
 module ObjectFit = {
   open Chakra__AtomicTypes
@@ -1219,7 +1233,7 @@ module Pseudo = {
     ~boxShadow: Identity.t=?,
     /**
     TODO
-    Other Props 
+    Other Props
     partial implemented
     @see <https://chakra-ui.com/docs/features/style-props#other-props>
   ~animation=?,

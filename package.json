@@ -1,6 +1,6 @@
 {
   "name": "rescript-chakra",
-  "version": "1.2.0-next.4",
+  "version": "1.2.0-next.8",
   "description": "⚡️ ReScript bindings for @chakra-ui/react",
   "keywords": [
     "rescript",
@@ -12,6 +12,9 @@
   "author": "ri7nz <hi@rin.rocks>",
   "license": "MIT",
   "homepage": "https://rescript-chakra.vercel.app/",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "src/**/*.re",
     "src/**/*.rei",
@@ -32,22 +35,10 @@
     "semantic-release": "semantic-release",
     "ci": "yarn install --immutable",
     "pretest": "yarn build",
-    "test": "jest"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "devDependencies": {
-    "@glennsl/bs-jest": "0.7.0",
-    "@rescript/react": "0.10.3",
-    "jest": "26.6.3",
-    "rescript": "9.1.4",
-    "semantic-release": "17.4.4",
-    "semantic-release-npm-github-publish": "1.4.0"
-  },
-  "peerDependencies": {
-    "@chakra-ui/react": ">=1.6.3",
-    "@rescript/react": "0.10.3"
+    "test": "jest",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "jest": {
     "verbose": true,
@@ -59,5 +50,38 @@
       "/node_modules/",
       "/testUtils/"
     ]
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "lint-staged": {
+    "*.{md,json,js}": [
+      "prettier --write"
+    ],
+    "*.{res,resi}": [
+      "rescript format"
+    ]
+  },
+  "devDependencies": {
+    "@chakra-ui/react": "1.6.8",
+    "@emotion/react": "11.4.1",
+    "@emotion/styled": "11.3.0",
+    "@glennsl/bs-jest": "0.7.0",
+    "@rescript/react": "0.10.3",
+    "framer-motion": "4.1.17",
+    "husky": "7.0.2",
+    "jest": "26.6.3",
+    "lint-staged": "11.1.2",
+    "pinst": "2.1.6",
+    "prettier": "2.4.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rescript": "9.1.4",
+    "semantic-release": "17.4.4",
+    "semantic-release-npm-github-publish": "1.4.0"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=1.6.3",
+    "@rescript/react": "0.10.3"
   }
 }

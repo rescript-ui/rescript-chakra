@@ -1,0 +1,22 @@
+{
+  "name": "rescript-nextjs-template",
+  "namespace": false,
+  "reason": { "react-jsx": 3 },
+  "refmt": 3,
+  "bs-dependencies": ["@rescript/react", "rescript-chakra"],
+  "ppx-flags": [],
+  "sources": [{ "dir": "src", "subdirs": true }],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".mjs",
+  "warnings": {
+    "number": "-3",
+    "error": "+101+8"
+  },
+  "gentypeconfig": {
+    "language": "untyped",
+    "shims": []
+  }
+}

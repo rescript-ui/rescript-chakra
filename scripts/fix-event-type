@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+refactor(){
+  local EVENT_LIST=(
+    "ReactEvent.Clipboard.t"
+    "ReactEvent.Composition.t"
+    "ReactEvent.Keyboard.t"
+    "ReactEvent.Focus.t"
+    "ReactEvent.Form.t"
+    "ReactEvent.Generic.t"
+    "ReactEvent.Mouse.t"
+    "ReactEvent.Pointer.t"
+    "ReactEvent.Selection.t"
+    "ReactEvent.Touch.t"
+    "ReactEvent.UI.t"
+    "ReactEvent.Wheel.t"
+    "ReactEvent.Media.t"
+    "ReactEvent.Synthetic.t"
+    "ReactEvent.Animation.t"
+    )
+  
+  command -v ack &>/dev/null || {
+    echo "Error : need ack installed in your system before running this script"
+    exit 1
+  }
+  local dir="$1"
+  echo "start refactor in $dir" 
+  for event in "${EVENT_LIST[@]}"
+  do
+    cd "$dir" && ack "$event" -l | xargs perl -pi -E "s/$event/$event \=\> unit/g"
+  done
+}
+
+# $1 is directory target
+refactor $1

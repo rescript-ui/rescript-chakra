@@ -79,8 +79,35 @@ module Size = {
       | xs
     ]
   }
+
   module Tag = {
     type t = [
+      | xs
+      | sm
+      | md
+      | lg
+    ]
+  }
+  module Select = {
+    type t = [
+      | xs
+      | sm
+      | md
+      | lg
+    ]
+  }
+  module Spinner = {
+    type t = [
+      | xs
+      | sm
+      | md
+      | lg
+      | xl
+    ]
+  }
+  module Progress = {
+    type t = [
+      | xs
       | sm
       | md
       | lg
