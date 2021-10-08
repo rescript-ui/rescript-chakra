@@ -147,7 +147,12 @@ All of Style Props implementation is write in File:[Chakra\_\_MakeProps.res](htt
 - [ ] Editable
 - [ ] Form Control
 - [ ] Icon Button
-- [ ] Input
+- [x] Input
+  - [x] InputGroup
+  - [x] InputLeftAddon
+  - [x] InputRightAddon
+  - [x] InputLeftElement
+  - [x] InputRightElement
 - [ ] Number Input
 - [ ] Pin Input
 - [ ] Radio
