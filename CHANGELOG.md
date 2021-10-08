@@ -1,3 +1,14 @@
+# [1.2.0-next.10](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.9...v1.2.0-next.10) (2021-10-08)
+
+### Documentation
+
+- add image for README.md ([dbf2f13](https://github.com/ri7nz/rescript-chakra/commit/dbf2f13f29dccd0b9afd82b29885f0c3dea1ad15))
+
+### Features
+
+- **Input:** add binding for Input ([#23](https://github.com/ri7nz/rescript-chakra/issues/23)) ([7cdf3f9](https://github.com/ri7nz/rescript-chakra/commit/7cdf3f966db1b962776cc28aa960323fae45135a))
+- **Input:** add binding for Input extra ([#24](https://github.com/ri7nz/rescript-chakra/issues/24)) ([4a6e846](https://github.com/ri7nz/rescript-chakra/commit/4a6e84666889e0282fb960aa53c94eeea9c1c340))
+
 # [1.2.0-next.9](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.8...v1.2.0-next.9) (2021-10-03)
 
 ### Features
