@@ -22,6 +22,7 @@ module Square = Chakra__Square
 module Circle = Chakra__Circle
 module Container = Chakra__Container
 module Flex = Chakra__Flex
+module Spacer = Chakra__Spacer
 module Grid = Chakra__Grid
 // TODO Layout
 // module GridItem = Chakra__GridItem
