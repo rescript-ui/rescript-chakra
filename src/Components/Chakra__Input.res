@@ -15,6 +15,7 @@ external make: (
   ~isReadOnly: bool=?,
   ~isRequired: bool=?,
   ~size: Size.Select.t=?,
+  ~value: string=?,
   ~variant: Identity.t=?,
   /**
     Margin and Padding
@@ -239,7 +240,7 @@ external make: (
   @as("_selection") ~_selection: Pseudo.t=?,
   /**
     TODO
-    Other Props 
+    Other Props
     partial implemented
     @see <https://chakra-ui.com/docs/features/style-props#other-props>
   ~animation=?,
@@ -294,7 +295,7 @@ external make: (
   ~onFocus: ReactEvent.Focus.t => unit=?,
   ~onBlur: ReactEvent.Focus.t => unit=?,
   /**
-    ReactEvent Form 
+    ReactEvent Form
     @see <https://reactjs.org/docs/events.html#form-events>
    **/
   ~onChange: ReactEvent.Form.t => unit=?,
@@ -403,7 +404,7 @@ external make: (
     ~onToggle
    **/
   /**
-    ReactEvent Animation 
+    ReactEvent Animation
     @see <https://reactjs.org/docs/events.html#animation-events>
    **/
   ~onAnimationStart: ReactEvent.Animation.t => unit=?,
