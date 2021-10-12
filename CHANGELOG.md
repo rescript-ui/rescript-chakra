@@ -1,3 +1,13 @@
+# [1.2.0-next.11](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.10...v1.2.0-next.11) (2021-10-12)
+
+### Bug Fixes
+
+- **Input:** add value for Input ([#26](https://github.com/ri7nz/rescript-chakra/issues/26)) ([5cb98fc](https://github.com/ri7nz/rescript-chakra/commit/5cb98fc77e15477090bf13fe5b2bd38e99c83665))
+
+### Features
+
+- **Spacer:** add binding for Spacer component ([#25](https://github.com/ri7nz/rescript-chakra/issues/25)) ([e3ce148](https://github.com/ri7nz/rescript-chakra/commit/e3ce14836c6bf8c3a16e5b6a603facb2453f21a6))
+
 # [1.2.0-next.10](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.9...v1.2.0-next.10) (2021-10-08)
 
 ### Documentation
