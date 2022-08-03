@@ -79,6 +79,15 @@ module Size = {
       | xs
     ]
   }
+
+  module Tag = {
+    type t = [
+      | xs
+      | sm
+      | md
+      | lg
+    ]
+  }
   module Select = {
     type t = [
       | xs
