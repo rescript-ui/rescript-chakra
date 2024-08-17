@@ -499,7 +499,7 @@ module GridArea = {
         let grid1 = grid1->GridArea.toString
         let grid2 = grid2->GridArea.toString
 
-        let grid = `$grid1 / $grid2`
+        let grid = `${grid1} / ${grid2}`
         grid->Identity.fromString
       }
     | #gridArea3(grid1, grid2, grid3) => {
@@ -507,7 +507,7 @@ module GridArea = {
         let grid2 = grid2->GridArea.toString
         let grid3 = grid3->GridArea.toString
 
-        let grid = `$grid1 / $grid2 / $grid3`
+        let grid = `${grid1} / ${grid2} / ${grid3}`
         grid->Identity.fromString
       }
     | #gridArea4(grid1, grid2, grid3, grid4) => {
@@ -516,7 +516,7 @@ module GridArea = {
         let grid3 = grid3->GridArea.toString
         let grid4 = grid4->GridArea.toString
 
-        let grid = `$grid1 / $grid2 / $grid3 / $grid4`
+        let grid = `${grid1} / ${grid2} / ${grid3} / ${grid4}`
         grid->Identity.fromString
       }
     | #array(arr) => arr->arrayMap(identity)->Identity.fromArray
@@ -724,7 +724,7 @@ module BackgroundSize = {
     | #size(x, y) => {
         let x = x->Length.toString
         let y = y->Length.toString
-        let size = `$x $y`
+        let size = `${x} ${y}`
         size->Identity.fromString
       }
     | #auto => "auto"->Identity.fromString
@@ -751,7 +751,7 @@ module BackgroundPosition = {
         | #...Length.t as l => Length.toString(l)
         }
 
-        let b = `$h $v`
+        let b = `${h} ${v}`
         b->Identity.fromString
       }
     | #...Length.t as l => l->Length.toString->Identity.fromString
@@ -771,7 +771,7 @@ module BackgroundRepeat = {
     | #hv(#...BackgroundRepeat.horizontal as h, #...BackgroundRepeat.vertical as v) => {
         let h = h->BackgroundRepeat.toString
         let v = v->BackgroundRepeat.toString
-        let b = `$h $v`
+        let b = `${h} ${v}`
         b->Identity.fromString
       }
     | #...Var.t as va => va->Var.toString->Identity.fromString
@@ -849,17 +849,17 @@ module Shadow = {
     let c = c->Colors.toString
 
     switch (blur, spread, inset) {
-    | (_, _, Some(_inset)) => `inset $x $y $c`
+    | (_, _, Some(_inset)) => `inset ${x} ${y} ${c}`
     | (Some(radius), None, _) => {
         let radius = radius->Length.toString
-        `$x $y $radius $c`
+        `${x} ${y} ${radius} ${c}`
       }
     | (Some(radius), Some(spread), _) => {
         let radius = radius->Length.toString
         let spread = spread->Length.toString
-        `$x $y $radius $spread $c`
+        `${x} ${y} ${radius} ${spread} ${c}`
       }
-    | _ => `$x, $y, $c`
+    | _ => `${x}, ${y}, ${c}`
     }
   }
   let rec identity = x =>
@@ -902,7 +902,7 @@ module AspectRatio = {
       | #ratio(a, b) => {
           let a = a->Js.Float.toString
           let b = b->Js.Float.toString
-          `$a $b`->Identity.fromString
+          `${a} ${b}`->Identity.fromString
         }
       | #array(arr) => arr->arrayMap(identity)->Identity.fromArray
       }
@@ -1055,7 +1055,7 @@ module Pseudo = {
   @obj
   external pseudo: (
     /* Margin and Padding
-    @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding> */
+     @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding> */
     ~margin: Identity.t=?,
     ~marginTop: Identity.t=?,
     ~marginRight: Identity.t=?,
@@ -1075,17 +1075,17 @@ module Pseudo = {
     // ? ~px: Identity.t=?,
     // ? ~py: Identity.t=?,
     /* Colors and BackgroundColor
-    @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color> */
+     @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color> */
     // ? ~colorScheme: Identity.t=?,
     ~color: Identity.t=?,
     ~backgroundColor: Identity.t=?,
     ~opacity: Identity.t=?,
     /* Gradient
-    @see <https://chakra-ui.com/docs/features/style-props#gradient> */
+     @see <https://chakra-ui.com/docs/features/style-props#gradient> */
     ~bgGradient: Identity.t=?,
     ~backgroundClip: Identity.t=?,
     /* Typography
-    @see <https://chakra-ui.com/docs/features/style-props#typography> */
+     @see <https://chakra-ui.com/docs/features/style-props#typography> */
     ~fontFamily: Identity.t=?,
     ~fontSize: Identity.t=?,
     ~fontWeight: Identity.t=?,
@@ -1096,7 +1096,7 @@ module Pseudo = {
     ~textTransform: Identity.t=?,
     ~textDecoration: Identity.t=?,
     /* Layout Width and Height
-    @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height> */
+     @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height> */
     ~width: Identity.t=?,
     ~maxWidth: Identity.t=?,
     ~minWidth: Identity.t=?,
@@ -1110,7 +1110,7 @@ module Pseudo = {
     ~overflowY: Identity.t=?,
     ~overflowX: Identity.t=?,
     /* Flexbox
-    @see <https://chakra-ui.com/docs/features/style-props#flexbox> */
+     @see <https://chakra-ui.com/docs/features/style-props#flexbox> */
     ~alignItems: Identity.t=?,
     ~alignContent: Identity.t=?,
     ~justifyItems: Identity.t=?,
@@ -1125,7 +1125,7 @@ module Pseudo = {
     ~alignSelf: Identity.t=?,
     ~order: Identity.t=?,
     /* Grid
-    @see <https://chakra-ui.com/docs/features/style-props#grid-layout> */
+     @see <https://chakra-ui.com/docs/features/style-props#grid-layout> */
     ~gridGap: Identity.t=?,
     ~gridRowGap: Identity.t=?,
     ~gridColumnGap: Identity.t=?,
@@ -1139,7 +1139,7 @@ module Pseudo = {
     ~gridTemplateColumns: Identity.t=?,
     ~gridTemplateAreas: Identity.t=?,
     /* Background
-    @see <https://chakra-ui.com/docs/features/style-props#background> */
+     @see <https://chakra-ui.com/docs/features/style-props#background> */
     ~background: Identity.t=?,
     ~backgroundImage: Identity.t=?,
     ~backgroundSize: Identity.t=?,
@@ -1147,7 +1147,7 @@ module Pseudo = {
     ~backgroundRepeat: Identity.t=?,
     ~backgroundAttachment: Identity.t=?,
     /* Borders
-    @see<https://chakra-ui.com/docs/features/style-props#border-radius> */
+     @see<https://chakra-ui.com/docs/features/style-props#border-radius> */
     ~border: Identity.t=?,
     ~borderWidth: Identity.t=?,
     ~borderStyle: Identity.t=?,
@@ -1179,7 +1179,7 @@ module Pseudo = {
     ~borderX: Identity.t=?,
     ~borderY: Identity.t=?,
     /* Border Radius
-    @see<https://chakra-ui.com/docs/features/style-props#border-radius> */
+     @see<https://chakra-ui.com/docs/features/style-props#border-radius> */
     ~borderRadius: Identity.t=?,
     ~borderTopLeftRadius: Identity.t=?,
     ~borderTopStartRadius: Identity.t=?,
@@ -1196,7 +1196,7 @@ module Pseudo = {
     ~borderLeftRadius: Identity.t=?,
     ~borderStartRadius: Identity.t=?,
     /* Position
-    @see <https://chakra-ui.com/docs/features/style-props#position> */
+     @see <https://chakra-ui.com/docs/features/style-props#position> */
     ~position: Identity.t=?,
     ~zIndex: Identity.t=?,
     ~top: Identity.t=?,
@@ -1204,7 +1204,7 @@ module Pseudo = {
     ~bottom: Identity.t=?,
     ~left: Identity.t=?,
     /* Shadow
-    @see <https://chakra-ui.com/docs/features/style-props#shadow> */
+     @see <https://chakra-ui.com/docs/features/style-props#shadow> */
     ~textShadow: Identity.t=?,
     ~boxShadow: Identity.t=?,
     /* TODO
@@ -1379,7 +1379,7 @@ module Pseudo = {
     ~textShadow=?,
     ~boxShadow=?,
     /* TODO
-      Other Props */
+     Other Props */
     ~fill=?,
     ~stroke=?,
     (),
@@ -1527,7 +1527,7 @@ module Pseudo = {
       ~textShadow=?textShadow->TextShadow.fromOption,
       ~boxShadow=?boxShadow->BoxShadow.fromOption,
       /* TODO
-      Other Props */
+       Other Props */
       ~fill=?fill->Color.fromOption,
       ~stroke=?stroke->Color.fromOption,
       (),

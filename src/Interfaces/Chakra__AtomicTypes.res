@@ -1814,7 +1814,7 @@ module Content = {
     | #noOpenQuote => "no-open-quote"
     | #noCloseQuote => "no-close-quote"
     | #attr(name) => "attr(" ++ (name ++ ")")
-    | #text(string) => j`"$string"`
+    | #text(s) => `"${s}"`
     }
 }
 
@@ -2499,7 +2499,7 @@ module Borders = {
         let style = style->BorderStyle.toString
         let color = color->Colors.toString
 
-        j`$px $style $color`
+        `${px} ${style} ${color}`
       }
     }
 }
@@ -2642,7 +2642,7 @@ module GridColumn = {
     | #slash(a, b) => {
         let a = a->toString
         let b = b->toString
-        j`$a / $b`
+        `${a} ${b}`
       }
     }
 }
@@ -2664,7 +2664,7 @@ module GridRow = {
     | #slash(a, b) => {
         let a = a->toString
         let b = b->toString
-        j`$a / $b`
+        `${a} ${b}`
       }
     }
 }
@@ -2689,7 +2689,7 @@ module TrackLength = {
     | #minmax(min, max) => {
         let min = min->Minmax.toString
         let max = max->Minmax.toString
-        j`minmax($min,$max)`
+        `minmax(${min}, ${max})`
       }
     }
 }
@@ -2705,7 +2705,7 @@ module GridLength = {
     | #repeat(r, t) => {
         let r = r->RepeatValue.toString
         let t = t->Dimension.toString
-        j`repeat($r, $t)`
+        `repeat(${r}, ${t})`
       }
     }
 }
@@ -2723,7 +2723,7 @@ module Gradients = {
     ->Js.Array2.map(((l, c)) => {
       let l = l->Length.toString
       let c = c->Colors.toString
-      j`$c $l`
+      `${c} ${l}`
     })
     ->Js.Array2.joinWith(", ")
 

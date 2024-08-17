@@ -1,7 +1,6 @@
 open Vitest
 
 // make pipe-first
-let expect = x => Expect.expect(x)
 let toBe = x => Expect.toBe(_, x)
 let toEqual = x => Expect.toEqual(_, x)
 let pseudo = Chakra.pseudo
@@ -125,14 +124,18 @@ describe("Test MakeProps", () => {
 
   let testCasesPseudo = list{(pseudo(~color=#teal900, ()), {"color": "teal.900"})}
 
-  testAll("Chakra UI Theme Color Variant", testCasesColors, ((case, expected)) => {
+  testCasesColors
+  ->Belt.List.toArray
+  ->Each.test2("Chakra UI Theme Color Variant", (case, expected) => {
     open Chakra__MakeProps
     let result = Color.identity(case)
     let expected = expected->Identity.fromString
-    result->expect->toBe(expected)
+    result->expect->Expect.toBe(expected)
   })
-  testAll("Pseudo Creation", testCasesPseudo, ((case, expected)) => {
+  testCasesPseudo
+  ->Belt.List.toArray
+  ->Each.test2("Pseudo Creation", (case, expected) => {
     let expected = expected->asPseudo
-    case->expect->toEqual(expected)
+    case->expect->Expect.toEqual(expected)
   })
 })
