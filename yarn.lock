@@ -10555,7 +10555,7 @@ fsevents@^2.1.2:
     prettier: 2.4.1
     react: 17.0.2
     react-dom: 17.0.2
-    rescript: 9.1.4
+    rescript: ^11
     semantic-release: 17.4.4
     semantic-release-npm-github-publish: 1.4.0
   peerDependencies:
@@ -10564,15 +10564,14 @@ fsevents@^2.1.2:
   languageName: unknown
   linkType: soft
 
-"rescript@npm:9.1.4":
-  version: 9.1.4
-  resolution: "rescript@npm:9.1.4"
+"rescript@npm:^11":
+  version: 11.1.3
+  resolution: "rescript@npm:11.1.3"
   bin:
     bsc: bsc
-    bsrefmt: bsrefmt
     bstracing: lib/bstracing
     rescript: rescript
-  checksum: 96638bedf42159713b67dde4cd7c2008775f1f310ba41f65d879521983a011bcfbfb7ab0b404af9084ff25ccedc14f2289de8805002fe95154a11e75cbe87145
+  checksum: 0439ac58fe2e04199d7841796919ee18a5f3057ddf3405194965b34f914907d93606631b9869c7027881bf71c101bef7067b6e95ba1900b15b98602644e89789
   languageName: node
   linkType: hard
 
