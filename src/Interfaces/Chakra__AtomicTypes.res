@@ -1,7 +1,5 @@
-/**
- Acknowledment to @see <https://github.com/giraud/bs-css/>
- THIS IS FILE IS COPIED @see FROM <https://github.com/giraud/bs-css/blob/cb242dbd08a00bd848faecb756a9ddce68d8707a/bs-css/src/Css_AtomicTypes.re>
- **/
+/* Acknowledment to @see <https://github.com/giraud/bs-css/>
+ THIS IS FILE IS COPIED @see FROM <https://github.com/giraud/bs-css/blob/cb242dbd08a00bd848faecb756a9ddce68d8707a/bs-css/src/Css_AtomicTypes.re> */
 let join = (strings, separator) => {
   let rec run = (strings, acc) =>
     switch strings {
