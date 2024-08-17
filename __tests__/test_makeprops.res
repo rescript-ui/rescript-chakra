@@ -1,4 +1,4 @@
-open Jest
+open Vitest
 
 // make pipe-first
 let expect = x => Expect.expect(x)
