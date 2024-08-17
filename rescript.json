@@ -25,7 +25,7 @@
   "bs-dependencies": ["@rescript/react"],
   "bs-dev-dependencies": ["rescript-vitest"],
   "package-specs": {
-    "module": "commonjs",
+    "module": "esmodule",
     "in-source": true
   }
 }
