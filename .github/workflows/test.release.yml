@@ -18,7 +18,7 @@ jobs:
           echo "::set-output name=path::$(yarn config get cacheFolder)"
           echo "::set-output name=commithash::$(git rev-parse --short HEAD)"
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: yarn-cache
         with:
           path: ${{ steps.vars.outputs.path }}
@@ -53,7 +53,7 @@ jobs:
           echo "::set-output name=path::$(yarn config get cacheFolder)"
           echo "::set-output name=commithash::$(git rev-parse --short HEAD)"
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: yarn-cache
         with:
           path: ${{ steps.vars.outputs.path }}
