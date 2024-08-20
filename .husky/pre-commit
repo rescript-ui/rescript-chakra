@@ -4,4 +4,4 @@
 
 yarn run lint-staged
 yarn run build
-yarn run test
+yarn run test -- --coverage

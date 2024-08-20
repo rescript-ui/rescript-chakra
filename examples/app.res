@@ -7,9 +7,7 @@ module TextAndHeading = {
     <Text _as=#i casing=#lowercase> {"Hello"->React.string} </Text>
   </>
 }
-/**
- @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding>
- **/
+/* @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding> */
 module MarginAndProps = {
   open Chakra
   @react.component
@@ -22,9 +20,7 @@ module MarginAndProps = {
     <Box m={#array([#2, #3])} />
   </>
 }
-/**
- @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height>
- **/
+/* @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height> */
 module LayoutWidthHeight = {
   open Chakra
   @react.component
@@ -43,13 +39,11 @@ module LayoutWidthHeight = {
     <Box w=#px(49) />
   </>
 }
-/**
-  Reference
+/* Reference
   @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
   @see <https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsla()>
   @see <https://en.wikipedia.org/wiki/HSL_and_HSV>
-  @see <https://developer.mozilla.org/en-US/docs/Web/CSS/color_value>
- **/
+  @see <https://developer.mozilla.org/en-US/docs/Web/CSS/color_value> */
 module ColorsAndBackground = {
   open Chakra
   @react.component
@@ -72,10 +66,8 @@ module ColorsAndBackground = {
     <Box backgroundColor=#hsla(#deg(235.), #percent(100.), #percent(50.), #num(1.)) />
   </>
 }
-/**
-  Borders
-  @see <https://chakra-ui.com/docs/features/style-props#borders>
-**/
+/* Borders
+  @see <https://chakra-ui.com/docs/features/style-props#borders> */
 module Borders = {
   open Chakra
   @react.component
@@ -84,10 +76,8 @@ module Borders = {
     <Box border=#1 borderColor=#gray200> {"Card"->React.string} </Box>
   </>
 }
-/**
-  Background
-  @see <https://chakra-ui.com/docs/features/style-props#background>
-**/
+/* Background
+  @see <https://chakra-ui.com/docs/features/style-props#background> */
 module Background = {
   open Chakra
   @react.component

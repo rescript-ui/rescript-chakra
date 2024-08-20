@@ -3,9 +3,7 @@ open Chakra__MakeProps
 @react.component @module("@chakra-ui/react")
 external make: (
   ~children: React.element=?,
-  /**
-    Component Props {Spinner}
-   **/
+  /* Component Props {Spinner} */
   ~_as: string=?,
   ~isTruncated: bool=?,
   ~emptyColor: string=?,
@@ -13,10 +11,8 @@ external make: (
   ~size: Chakra__Theme.Size.Spinner.t=?,
   ~thickness: string=?,
   ~speed: string=?,
-  /**
-    Margin and Padding
-    @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding>
-   **/
+  /* Margin and Padding
+    @see <https://chakra-ui.com/docs/features/style-props#margin-and-padding> */
   ~margin: Identity.t=?,
   ~marginTop: Identity.t=?,
   ~marginRight: Identity.t=?,
@@ -35,24 +31,18 @@ external make: (
   ~paddingStart: Identity.t=?,
   ~px: Identity.t=?,
   ~py: Identity.t=?,
-  /**
-    Colors and BackgroundColor
-    @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color>
-   **/
+  /* Colors and BackgroundColor
+    @see <https://chakra-ui.com/docs/features/style-props#color-and-background-color> */
   ~colorScheme: ColorScheme.t=?,
   ~color: Identity.t=?,
   ~backgroundColor: Identity.t=?,
   ~opacity: Identity.t=?,
-  /**
-    Gradient
-    @see <https://chakra-ui.com/docs/features/style-props#gradient>
-   **/
+  /* Gradient
+    @see <https://chakra-ui.com/docs/features/style-props#gradient> */
   ~bgGradient: Identity.t=?,
   ~backgroundClip: Identity.t=?,
-  /**
-    Typography
-    @see <https://chakra-ui.com/docs/features/style-props#typography>
-   **/
+  /* Typography
+    @see <https://chakra-ui.com/docs/features/style-props#typography> */
   ~fontFamily: Identity.t=?,
   ~fontSize: Identity.t=?,
   ~fontWeight: Identity.t=?,
@@ -62,10 +52,8 @@ external make: (
   ~fontStyle: Identity.t=?,
   ~textTransform: Identity.t=?,
   ~textDecoration: Identity.t=?,
-  /**
-    Layout Width and Height
-    @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height>
-   **/
+  /* Layout Width and Height
+    @see <https://chakra-ui.com/docs/features/style-props#layout-width-and-height> */
   ~width: Identity.t=?,
   ~maxWidth: Identity.t=?,
   ~minWidth: Identity.t=?,
@@ -78,10 +66,8 @@ external make: (
   ~overflow: Identity.t=?,
   ~overflowY: Identity.t=?,
   ~overflowX: Identity.t=?,
-  /**
-    Flexbox
-    @see <https://chakra-ui.com/docs/features/style-props#flexbox>
-   **/
+  /* Flexbox
+    @see <https://chakra-ui.com/docs/features/style-props#flexbox> */
   ~alignItems: Identity.t=?,
   ~alignContent: Identity.t=?,
   ~justifyItems: Identity.t=?,
@@ -95,10 +81,8 @@ external make: (
   ~justifySelf: Identity.t=?,
   ~alignSelf: Identity.t=?,
   ~order: Identity.t=?,
-  /**
-    Grid
-    @see <https://chakra-ui.com/docs/features/style-props#grid-layout>
-   **/
+  /* Grid
+    @see <https://chakra-ui.com/docs/features/style-props#grid-layout> */
   ~gridGap: Identity.t=?,
   ~gridRowGap: Identity.t=?,
   ~gridColumnGap: Identity.t=?,
@@ -111,20 +95,16 @@ external make: (
   ~gridTemplateRows: Identity.t=?,
   ~gridTemplateColumns: Identity.t=?,
   ~gridTemplateAreas: Identity.t=?,
-  /**
-    Background
-    @see <https://chakra-ui.com/docs/features/style-props#background>
-   **/
+  /* Background
+    @see <https://chakra-ui.com/docs/features/style-props#background> */
   ~background: Identity.t=?,
   ~backgroundImage: Identity.t=?,
   ~backgroundSize: Identity.t=?,
   ~backgroundPosition: Identity.t=?,
   ~backgroundRepeat: Identity.t=?,
   ~backgroundAttachment: Identity.t=?,
-  /**
-    Borders
-    @see<https://chakra-ui.com/docs/features/style-props#border-radius>
-   **/
+  /* Borders
+    @see<https://chakra-ui.com/docs/features/style-props#border-radius> */
   ~border: Identity.t=?,
   ~borderWidth: Identity.t=?,
   ~borderStyle: Identity.t=?,
@@ -155,10 +135,8 @@ external make: (
   ~borderStartColor: Identity.t=?,
   ~borderX: Identity.t=?,
   ~borderY: Identity.t=?,
-  /**
-    Border Radius
-    @see<https://chakra-ui.com/docs/features/style-props#border-radius>
-   **/
+  /* Border Radius
+    @see<https://chakra-ui.com/docs/features/style-props#border-radius> */
   ~borderRadius: Identity.t=?,
   ~borderTopLeftRadius: Identity.t=?,
   ~borderTopStartRadius: Identity.t=?,
@@ -174,26 +152,20 @@ external make: (
   ~borderBottomRadius: Identity.t=?,
   ~borderLeftRadius: Identity.t=?,
   ~borderStartRadius: Identity.t=?,
-  /**
-    Position
-    @see <https://chakra-ui.com/docs/features/style-props#position>
-   **/
+  /* Position
+    @see <https://chakra-ui.com/docs/features/style-props#position> */
   ~position: Identity.t=?,
   ~zIndex: Identity.t=?,
   ~top: Identity.t=?,
   ~right: Identity.t=?,
   ~bottom: Identity.t=?,
   ~left: Identity.t=?,
-  /**
-    Shadow
-    @see <https://chakra-ui.com/docs/features/style-props#shadow>
-   **/
+  /* Shadow
+    @see <https://chakra-ui.com/docs/features/style-props#shadow> */
   ~textShadow: Identity.t=?,
   ~boxShadow: Identity.t=?,
-  /**
-    Pseudo
-    @see <https://chakra-ui.com/docs/features/style-props#pseudo>
-   **/
+  /* Pseudo
+    @see <https://chakra-ui.com/docs/features/style-props#pseudo> */
   @as("_hover") ~_hover: Pseudo.t=?,
   @as("_active") ~_active: Pseudo.t=?,
   @as("_focus") ~_focus: Pseudo.t=?,
@@ -234,8 +206,7 @@ external make: (
   @as("_placeholder") ~_placeholder: Pseudo.t=?,
   @as("_fullScreen") ~_fullScreen: Pseudo.t=?,
   @as("_selection") ~_selection: Pseudo.t=?,
-  /**
-    TODO
+  /* TODO
     Other Props 
     partial implemented
     @see <https://chakra-ui.com/docs/features/style-props#other-props>
@@ -260,56 +231,41 @@ external make: (
   ~float_=?,
   ~fill=?,
   ~stroke=?,
-  ~outline=?,
-   **/
+  ~outline=?, */
   ~fill: Identity.t=?,
   ~stroke: Identity.t=?,
-  /**
-    ReactEvent Clipboard
-    @see <https://reactjs.org/docs/events.html#clipboard-events>
-   **/
+  /* ReactEvent Clipboard
+    @see <https://reactjs.org/docs/events.html#clipboard-events> */
   ~onCopy: ReactEvent.Clipboard.t => unit=?,
   ~onCut: ReactEvent.Clipboard.t => unit=?,
   ~onPaste: ReactEvent.Clipboard.t => unit=?,
-  /**
-    ReactEvent Composition
-    @see <https://reactjs.org/docs/events.html#composition-events>
-   **/
+  /* ReactEvent Composition
+    @see <https://reactjs.org/docs/events.html#composition-events> */
   ~onCompositionEnd: ReactEvent.Composition.t => unit=?,
   ~onCompositionStart: ReactEvent.Composition.t => unit=?,
   ~onCompositionUpdate: ReactEvent.Composition.t => unit=?,
-  /**
-    ReactEvent Keyboard
-    @see <https://reactjs.org/docs/events.html#keyboard-events>
-   **/
+  /* ReactEvent Keyboard
+    @see <https://reactjs.org/docs/events.html#keyboard-events> */
   ~onKeyDown: ReactEvent.Keyboard.t => unit=?,
   ~onKeyPress: ReactEvent.Keyboard.t => unit=?,
-  ~onKeyUp: ReactEvent.Keyboard.t => unit=? /**
-    ReactEvent Focus
-    @see <https://reactjs.org/docs/events.html#focus-events>
-   **/,
+  ~onKeyUp: ReactEvent.Keyboard.t => unit=? /* ReactEvent Focus
+    @see <https://reactjs.org/docs/events.html#focus-events> */,
   ~onFocus: ReactEvent.Focus.t => unit=?,
   ~onBlur: ReactEvent.Focus.t => unit=?,
-  /**
-    ReactEvent Form 
-    @see <https://reactjs.org/docs/events.html#form-events>
-   **/
+  /* ReactEvent Form 
+    @see <https://reactjs.org/docs/events.html#form-events> */
   ~onChange: ReactEvent.Form.t => unit=?,
   ~onInput: ReactEvent.Form.t => unit=?,
   ~onInvalid: ReactEvent.Form.t => unit=?,
   ~onReset: ReactEvent.Form.t => unit=?,
   ~onSubmit: ReactEvent.Form.t => unit=?,
-  /**
-    ReactEvent Generic Events
+  /* ReactEvent Generic Events
     @see <https://reactjs.org/docs/events.html#generic-events>
     ISSUE: Not Implemented in @rescript/react for ReactEvent.Generic;
     ~onError: ReactEvent.Generic.t => unit=?,
-    ~onLoad: ReactEvent.Generic.t => unit=?,
-   **/
-  /**
-    ReactEvent Mouse
-    @see <https://reactjs.org/docs/events.html#mouse-events>
-   **/
+    ~onLoad: ReactEvent.Generic.t => unit=?, */
+  /* ReactEvent Mouse
+    @see <https://reactjs.org/docs/events.html#mouse-events> */
   ~onClick: ReactEvent.Mouse.t => unit=?,
   ~onContextMenu: ReactEvent.Mouse.t => unit=?,
   ~onDoubleClick: ReactEvent.Mouse.t => unit=?,
@@ -328,10 +284,8 @@ external make: (
   ~onMouseOut: ReactEvent.Mouse.t => unit=?,
   ~onMouseOver: ReactEvent.Mouse.t => unit=?,
   ~onMouseUp: ReactEvent.Mouse.t => unit=?,
-  /**
-    ReactEvent Pointer
-    @see <https://reactjs.org/docs/events.html#pointer-events>
-   **/
+  /* ReactEvent Pointer
+    @see <https://reactjs.org/docs/events.html#pointer-events> */
   ~onPointerDown: ReactEvent.Pointer.t => unit=?,
   ~onPointerMove: ReactEvent.Pointer.t => unit=?,
   ~onPointerUp: ReactEvent.Pointer.t => unit=?,
@@ -342,33 +296,23 @@ external make: (
   ~onPointerLeave: ReactEvent.Pointer.t => unit=?,
   ~onPointerOver: ReactEvent.Pointer.t => unit=?,
   ~onPointerOut: ReactEvent.Pointer.t => unit=?,
-  /**
-    ReactEvent Selection
-    @see <https://reactjs.org/docs/events.html#selection-events>
-   **/
+  /* ReactEvent Selection
+    @see <https://reactjs.org/docs/events.html#selection-events> */
   ~onSelect: ReactEvent.Selection.t => unit=?,
-  /**
-    ReactEvent Touch
-    @see <https://reactjs.org/docs/events.html#touch-events>
-   **/
+  /* ReactEvent Touch
+    @see <https://reactjs.org/docs/events.html#touch-events> */
   ~onTouchCancel: ReactEvent.Touch.t => unit=?,
   ~onTouchEnd: ReactEvent.Touch.t => unit=?,
   ~onTouchMove: ReactEvent.Touch.t => unit=?,
   ~onTouchStart: ReactEvent.Touch.t => unit=?,
-  /**
-    ReactEvent UI Events
-    @see <https://reactjs.org/docs/events.html#ui-events>
-   **/
+  /* ReactEvent UI Events
+    @see <https://reactjs.org/docs/events.html#ui-events> */
   ~onScroll: ReactEvent.UI.t => unit=?,
-  /**
-    ReactEvent Wheel
-    @see <https://reactjs.org/docs/events.html#wheel-events>
-   **/
+  /* ReactEvent Wheel
+    @see <https://reactjs.org/docs/events.html#wheel-events> */
   ~onWheel: ReactEvent.Wheel.t => unit=?,
-  /**
-    ReactEvent Media
-    @see <https://reactjs.org/docs/events.html#media-events>
-   **/
+  /* ReactEvent Media
+    @see <https://reactjs.org/docs/events.html#media-events> */
   ~onAbort: ReactEvent.Media.t => unit=?,
   ~onCanPlay: ReactEvent.Media.t => unit=?,
   ~onCanPlayThrough: ReactEvent.Media.t => unit=?,
@@ -394,28 +338,20 @@ external make: (
   ~onWaiting: ReactEvent.Media.t => unit=?,
   ~onLoad: ReactEvent.Synthetic.t => unit=?,
   ~onError: ReactEvent.Synthetic.t => unit=?,
-  /**
-    ReactEvent Other
+  /* ReactEvent Other
     @see <https://reactjs.org/docs/events.html#other-events>
-    ~onToggle
-   **/
-  /**
-    ReactEvent Animation 
-    @see <https://reactjs.org/docs/events.html#animation-events>
-   **/
+    ~onToggle */
+  /* ReactEvent Animation 
+    @see <https://reactjs.org/docs/events.html#animation-events> */
   ~onAnimationStart: ReactEvent.Animation.t => unit=?,
   ~onAnimationEnd: ReactEvent.Animation.t => unit=?,
   ~onAnimationIteration: ReactEvent.Animation.t => unit=?,
 ) => React.element = "Spinner"
 
 let makeProps = (
-  /**
-    Component Props {Spinner}
-   **/
+  /* Component Props {Spinner} */
   ~emptyColor=?,
-  /**
-    Margin and Padding
-   **/
+  /* Margin and Padding */
   ~m=?,
   ~margin=?,
   ~mt=?,
@@ -448,22 +384,16 @@ let makeProps = (
   ~paddingStart=?,
   ~px=?,
   ~py=?,
-  /**
-    Colors and BackgroundColor
-   **/
+  /* Colors and BackgroundColor */
   ~color=?,
   ~backgroundColor=?,
   ~bgColor=?,
   ~opacity=?,
-  /**
-    Gradient
-   **/
+  /* Gradient */
   ~bgGradient=?,
   ~backgroundClip=?,
   ~bgClip=?,
-  /**
-    Typography
-   **/
+  /* Typography */
   ~fontFamily=?,
   ~fontSize=?,
   ~fontWeight=?,
@@ -473,9 +403,7 @@ let makeProps = (
   ~fontStyle=?,
   ~textTransform=?,
   ~textDecoration=?,
-  /**
-    Layout Width and Height
-   **/
+  /* Layout Width and Height */
   ~d=?,
   ~display=?,
   ~w=?,
@@ -495,9 +423,7 @@ let makeProps = (
   ~overflow=?,
   ~overflowX=?,
   ~overflowY=?,
-  /**
-    Flexbox
-   **/
+  /* Flexbox */
   ~alignItems=?,
   ~alignContent=?,
   ~justifyItems=?,
@@ -512,9 +438,7 @@ let makeProps = (
   ~justifySelf=?,
   ~alignSelf=?,
   ~order=?,
-  /**
-    Grid
-   **/
+  /* Grid */
   ~gridGap=?,
   ~gridRowGap=?,
   ~gridColumnGap=?,
@@ -527,9 +451,7 @@ let makeProps = (
   ~gridTemplateRows=?,
   ~gridTemplateColumns=?,
   ~gridTemplateAreas=?,
-  /**
-    Background
-   **/
+  /* Background */
   ~bg=?,
   ~background=?,
   ~bgImage=?,
@@ -542,9 +464,7 @@ let makeProps = (
   ~backgroundRepeat=?,
   ~bgAttachment=?,
   ~backgroundAttachment=?,
-  /**
-    Borders
-   **/
+  /* Borders */
   ~border=?,
   ~borderWidth=?,
   ~borderStyle=?,
@@ -575,9 +495,7 @@ let makeProps = (
   ~borderStartColor=?,
   ~borderX=?,
   ~borderY=?,
-  /**
-    Border Radius
-   **/
+  /* Border Radius */
   ~borderRadius=?,
   ~borderTopLeftRadius=?,
   ~borderTopStartRadius=?,
@@ -593,9 +511,7 @@ let makeProps = (
   ~borderBottomRadius=?,
   ~borderLeftRadius=?,
   ~borderStartRadius=?,
-  /**
-    Position
-   **/
+  /* Position */
   ~pos=?,
   ~position=?,
   ~zIndex=?,
@@ -603,26 +519,18 @@ let makeProps = (
   ~right=?,
   ~bottom=?,
   ~left=?,
-  /**
-    Shadow
-   **/
+  /* Shadow */
   ~textShadow=?,
   ~boxShadow=?,
-  /**
-    TODO
-    Other Props
-   **/
+  /* TODO
+    Other Props */
   ~fill=?,
   ~stroke=?,
 ) =>
   makeProps(
-    /**
-      Component Props {Spinner}
-     **/
+    /* Component Props {Spinner} */
     ~emptyColor=?emptyColor->Belt.Option.map(Chakra__AtomicTypes.Colors.toString),
-    /**
-      Margin and Padding
-     **/
+    /* Margin and Padding */
     ~margin=?m->withShorthand(margin)->Margin.fromOption,
     ~marginTop=?mt->withShorthand(marginTop)->Margin.fromOption,
     ~marginRight=?mr->withShorthand(marginRight)->Margin.fromOption,
@@ -641,20 +549,14 @@ let makeProps = (
     ~paddingStart=?ps->withShorthand(paddingStart)->Padding.fromOption,
     ~px=?px->Padding.fromOption,
     ~py=?py->Padding.fromOption,
-    /**
-      Colors and Background Color
-     **/
+    /* Colors and Background Color */
     ~color=?color->Color.fromOption,
     ~backgroundColor=?bgColor->withShorthand(backgroundColor)->BackgroundColor.fromOption,
     ~opacity=?opacity->Opacity.fromOption,
-    /**
-      Gradient
-     **/
+    /* Gradient */
     ~bgGradient=?bgGradient->Gradient.fromOption,
     ~backgroundClip=?bgClip->withShorthand(backgroundClip)->BackgroundClip.fromOption,
-    /**
-      Typography
-     **/
+    /* Typography */
     ~fontFamily=?fontFamily->FontFamily.fromOption,
     ~fontSize=?fontSize->FontSize.fromOption,
     ~fontWeight=?fontWeight->FontWeight.fromOption,
@@ -664,9 +566,7 @@ let makeProps = (
     ~fontStyle=?fontStyle->FontStyle.fromOption,
     ~textTransform=?textTransform->TextTransform.fromOption,
     ~textDecoration=?textDecoration->TextDecoration.fromOption,
-    /**
-      Layout Width and Height
-     **/
+    /* Layout Width and Height */
     ~display=?d->withShorthand(display)->Display.fromOption,
     ~height=?h->withShorthand(height)->Height.fromOption,
     ~minHeight=?minH->withShorthand(minHeight)->Height.fromOption,
@@ -679,9 +579,7 @@ let makeProps = (
     ~overflow=?overflow->Overflow.fromOption,
     ~overflowY=?overflowY->Overflow.fromOption,
     ~overflowX=?overflowX->Overflow.fromOption,
-    /**
-      Flexbox
-     **/
+    /* Flexbox */
     ~alignItems=?alignItems->AlignItems.fromOption,
     ~alignContent=?alignContent->AlignContent.fromOption,
     ~justifyItems=?justifyItems->JustifyItems.fromOption,
@@ -695,9 +593,7 @@ let makeProps = (
     ~justifySelf=?justifySelf->JustifySelf.fromOption,
     ~alignSelf=?alignSelf->AlignSelf.fromOption,
     ~order=?order->Order.fromOption,
-    /**
-      Grid
-     **/
+    /* Grid */
     ~gridGap=?gridGap->GridGap.fromOption,
     ~gridRowGap=?gridRowGap->GridRowGap.fromOption,
     ~gridColumnGap=?gridColumnGap->GridColumnGap.fromOption,
@@ -710,9 +606,7 @@ let makeProps = (
     ~gridTemplateRows=?gridTemplateRows->GridTemplateRows.fromOption,
     ~gridTemplateColumns=?gridTemplateColumns->GridTemplateColumns.fromOption,
     ~gridTemplateAreas=?gridTemplateAreas->GridTemplateAreas.fromOption,
-    /**
-      Background
-     **/
+    /* Background */
     ~background=?bg->withShorthand(background)->Background.fromOption,
     ~backgroundImage=?bgImage->withShorthand(backgroundImage)->BackgroundImage.fromOption,
     ~backgroundSize=?bgSize->withShorthand(backgroundSize)->BackgroundSize.fromOption,
@@ -723,9 +617,7 @@ let makeProps = (
     ~backgroundAttachment=?bgAttachment
     ->withShorthand(backgroundAttachment)
     ->BackgroundAttachment.fromOption,
-    /**
-      Borders
-     **/
+    /* Borders */
     ~border=?border->Border.fromOption,
     ~borderWidth=?borderWidth->BorderWidth.fromOption,
     ~borderStyle=?borderStyle->BorderStyle.fromOption,
@@ -756,9 +648,7 @@ let makeProps = (
     ~borderStartColor=?borderStartColor->BorderColor.fromOption,
     ~borderX=?borderX->Border.fromOption,
     ~borderY=?borderY->Border.fromOption,
-    /**
-      Border Radius
-     **/
+    /* Border Radius */
     ~borderRadius=?borderRadius->BorderRadius.fromOption,
     ~borderTopLeftRadius=?borderTopLeftRadius->BorderRadius.fromOption,
     ~borderTopStartRadius=?borderTopStartRadius->BorderRadius.fromOption,
@@ -774,24 +664,18 @@ let makeProps = (
     ~borderBottomRadius=?borderBottomRadius->BorderRadius.fromOption,
     ~borderLeftRadius=?borderLeftRadius->BorderRadius.fromOption,
     ~borderStartRadius=?borderStartRadius->BorderRadius.fromOption,
-    /**
-      Position
-    **/
+    /* Position */
     ~position=?pos->withShorthand(position)->Position.fromOption,
     ~zIndex=?zIndex->ZIndex.fromOption,
     ~top=?top->Top.fromOption,
     ~right=?right->Right.fromOption,
     ~bottom=?bottom->Bottom.fromOption,
     ~left=?left->Left.fromOption,
-    /**
-      Shadow
-    **/
+    /* Shadow */
     ~textShadow=?textShadow->TextShadow.fromOption,
     ~boxShadow=?boxShadow->BoxShadow.fromOption,
-    /**
-      TODO
-      Other Props
-     **/
+    /* TODO
+      Other Props */
     ~fill=?fill->Color.fromOption,
     ~stroke=?stroke->Color.fromOption,
   )
