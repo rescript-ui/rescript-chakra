@@ -1811,13 +1811,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rescript/react@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@rescript/react@npm:0.11.0"
+"@rescript/react@npm:0.13.0":
+  version: 0.13.0
+  resolution: "@rescript/react@npm:0.13.0"
   peerDependencies:
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: e0beee0fd30d9a7a00addf669b54936cb5717faf46b524deb7851c1de7e273b963e0deaac85904e30c9e4c9837ef7019cd4795f57e0e5bbc8bbca00ed68a35f1
+  checksum: bbbd9aefc28f8f4a62e355538d1950483fe32af30d781bab073f738ab56bb2260ccb124818f093f9fb54e92ed22e34f0b82e579c2fe1f4d9460f95f9ba17feb5
   languageName: node
   linkType: hard
 
@@ -9153,7 +9153,7 @@ __metadata:
     "@chakra-ui/react": 1.6.8
     "@emotion/react": 11.4.1
     "@emotion/styled": 11.3.0
-    "@rescript/react": 0.11.0
+    "@rescript/react": 0.13.0
     "@vitest/coverage-v8": ^2.0.5
     framer-motion: 4.1.17
     husky: 7.0.2
