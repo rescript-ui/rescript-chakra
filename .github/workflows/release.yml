@@ -1,84 +1,70 @@
-name: Publish
-
+name: release
 on:
   push:
     branches:
-      - "[12].[0-9x]+.[0-9x]+"
       - main
       - next
-      - alpha
-      - beta
-
+  pull_request:
+    branches:
+      - main
+      - next
 jobs:
-  tests:
-    name: Test or Build
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - id: vars
-        name: Find Yarn's cache folder
-        run: |
-          echo "::set-output name=path::$(yarn config get cacheFolder)"
-          echo "::set-output name=commithash::$(git rev-parse --short HEAD)"
-      - name: Cache node modules
-        uses: actions/cache@v4
-        id: yarn-cache
-        with:
-          path: ${{ steps.vars.outputs.path }}
-          key: ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-
-      - name: Install dependencies
-        # if: ${{ !steps.yarn-cache.outputs.cache-hit }}
+      - uses: ./.github/actions/setup
+      - uses: wagoid/commitlint-github-action@v6
         env:
-          CI: true
-        run: |
-          yarn install
-          yarn ci
-      - name: Build
-        run: yarn run build
-      - name: Test
-        env:
-          CI: true
-        run: yarn run test --coverage
+          NODE_PATH: ${{ github.workspace }}/node_modules
 
-  publish:
-    needs: tests
-    name: Publish to Github & NPM or Github Package Registry
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+
+  release:
+    needs:
+      - build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: ./.github/actions/setup
+      - name: Build
+        run: yarn build
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
         with:
-          node-version: 12
-      - id: vars
-        name: Find Yarn's cache folder
-        run: |
-          echo "::set-output name=path::$(yarn config get cacheFolder)"
-          echo "::set-output name=commithash::$(git rev-parse --short HEAD)"
-      - name: Cache node modules
-        uses: actions/cache@v4
-        id: yarn-cache
-        with:
-          path: ${{ steps.vars.outputs.path }}
-          key: ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-${{ steps.vars.outputs.commithash }}-
-      - name: Install dependencies
-        # if: ${{ !steps.yarn-cache.outputs.cache-hit }}
+          semantic_version: 19.0.2
+          branches: |
+            [
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'main', 
+              'next', 
+              'next-major', 
+              {
+                name: 'beta', 
+                prerelease: true
+              }, 
+              {
+                name: 'alpha', 
+                prerelease: true
+              }
+            ]
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semrel-extra/npm
         env:
-          CI: true
-        run: |
-          yarn install
-          yarn ci
-      - if: success()
-        env:
-          CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn semantic-release
+          GIT_AUTHOR_EMAIL: "contact@evilfactorylabs.org"
+          GIT_COMMITTER_EMAIL: "contact@evilfactorylabs.org"
+          GIT_AUTHOR_NAME: "anakmagang"
+          GIT_COMMITTER_NAME: "anakmagang"

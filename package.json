@@ -20,16 +20,16 @@
     "src/**/*.rei",
     "src/**/*.res",
     "src/**/*.resi",
-    "bsconfig.json"
+    "rescript.json"
   ],
   "repository": "https://github.com/rescript-ui/rescript-chakra",
   "bugs": "https://github.com/rescript-ui/rescript-chakra/issues",
+  "packageManager": "yarn@4.1.0",
   "scripts": {
     "start": "rescript build -w",
     "prebuild": "rescript clean",
     "build": "rescript build -with-deps",
     "clean": "rescript clean",
-    "semantic-release": "semantic-release",
     "ci": "yarn install --immutable",
     "pretest": "yarn build",
     "test": "vitest run",
@@ -53,6 +53,9 @@
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "@rescript/react": "0.13.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@semrel-extra/npm": "1.2.0",
     "@vitest/coverage-v8": "^2.0.5",
     "framer-motion": "4.1.17",
     "husky": "7.0.2",
@@ -63,8 +66,7 @@
     "react-dom": "17.0.2",
     "rescript": "^11",
     "rescript-vitest": "^1.4.0",
-    "semantic-release": "17.4.4",
-    "semantic-release-npm-github-publish": "1.4.0",
+    "semantic-release": "19.0.2",
     "vitest": "^2.0.5"
   },
   "peerDependencies": {
