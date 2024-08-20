@@ -24,9 +24,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ri7nz/rescript-chakra.git"
+    "url": "https://github.com/rescript-ui/rescript-chakra.git"
   },
-  "bugs": "https://github.com/ri7nz/rescript-chakra/issues",
+  "bugs": "https://github.com/rescript-ui/rescript-chakra/issues",
   "scripts": {
     "start": "rescript build -w",
     "prebuild": "rescript clean",
