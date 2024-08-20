@@ -1,0 +1,31 @@
+{
+  "name": "rescript-chakra",
+  "uncurried": false,
+  "reason": {
+    "react-jsx": 3
+  },
+  "suffix": ".js",
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "examples",
+      "subdirs": true,
+      "type": "dev"
+    },
+    {
+      "dir": "__tests__",
+      "subdirs": true,
+      "type": "dev"
+    }
+  ],
+  "bs-dependencies": ["@rescript/react"],
+  "bs-dev-dependencies": ["rescript-vitest"],
+  "package-specs": {
+    "module": "esmodule",
+    "in-source": true
+  }
+}

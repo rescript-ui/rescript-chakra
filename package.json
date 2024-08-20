@@ -35,21 +35,10 @@
     "semantic-release": "semantic-release",
     "ci": "yarn install --immutable",
     "pretest": "yarn build",
-    "test": "jest",
+    "test": "vitest run",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
-  },
-  "jest": {
-    "verbose": true,
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/testUtils/"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/testUtils/"
-    ]
   },
   "prettier": {
     "trailingComma": "all"
@@ -66,19 +55,20 @@
     "@chakra-ui/react": "1.6.8",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
-    "@glennsl/bs-jest": "0.7.0",
-    "@rescript/react": "0.10.3",
+    "@rescript/react": "0.11.0",
+    "@vitest/coverage-v8": "^2.0.5",
     "framer-motion": "4.1.17",
     "husky": "7.0.2",
-    "jest": "26.6.3",
     "lint-staged": "11.1.2",
     "pinst": "2.1.6",
     "prettier": "2.4.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "rescript": "9.1.4",
+    "rescript": "^11",
+    "rescript-vitest": "^1.4.0",
     "semantic-release": "17.4.4",
-    "semantic-release-npm-github-publish": "1.4.0"
+    "semantic-release-npm-github-publish": "1.4.0",
+    "vitest": "^2.0.5"
   },
   "peerDependencies": {
     "@chakra-ui/react": ">=1.6.3",
