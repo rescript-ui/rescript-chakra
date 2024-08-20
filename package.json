@@ -57,7 +57,7 @@
     "@emotion/styled": "11.3.0",
     "@rescript/react": "0.11.0",
     "@vitest/coverage-v8": "^2.0.5",
-    "framer-motion": "4.1.17",
+    "framer-motion": "11.3.28",
     "husky": "7.0.2",
     "lint-staged": "11.1.2",
     "pinst": "2.1.6",
