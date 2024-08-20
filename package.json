@@ -22,10 +22,7 @@
     "src/**/*.resi",
     "bsconfig.json"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rescript-ui/rescript-chakra.git"
-  },
+  "repository": "https://github.com/rescript-ui/rescript-chakra",
   "bugs": "https://github.com/rescript-ui/rescript-chakra/issues",
   "scripts": {
     "start": "rescript build -w",
