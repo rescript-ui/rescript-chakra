@@ -5,7 +5,15 @@ updates:
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: npm
+    directory: /
+    assignees:
+      - "r17x"
+    open-pull-requests-limit: 5
+    rebase-strategy: auto
     schedule:
-      interval: "daily"
+      interval: daily
+    versioning-strategy: lockfile-only
+    labels:
+      - "automerge"
+      - "dependencies"
