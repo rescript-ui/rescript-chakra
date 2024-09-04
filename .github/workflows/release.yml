@@ -59,7 +59,7 @@ jobs:
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git
-            @semrel-extra/npm
+            @semantic-release/npm
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
