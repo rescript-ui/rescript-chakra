@@ -28,6 +28,7 @@ jobs:
         uses: codecov/codecov-action@v4
 
   release:
+    permissions: write-all
     needs:
       - build
     runs-on: ubuntu-latest
