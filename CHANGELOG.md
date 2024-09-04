@@ -1,3 +1,31 @@
+# [1.2.0](https://github.com/rescript-ui/rescript-chakra/compare/v1.1.0...v1.2.0) (2024-09-04)
+
+### Bug Fixes
+
+- **Components:** wrong type definition for ReactEvent.\* ([87cc911](https://github.com/rescript-ui/rescript-chakra/commit/87cc91105f7d068e56c6a71348bf9dd45fbc60c9))
+- **Input:** add value for Input ([#26](https://github.com/rescript-ui/rescript-chakra/issues/26)) ([5cb98fc](https://github.com/rescript-ui/rescript-chakra/commit/5cb98fc77e15477090bf13fe5b2bd38e99c83665))
+- **Link:** missing anchor HTML element attributes ([3b4477d](https://github.com/rescript-ui/rescript-chakra/commit/3b4477d53889ef597a17ce05724bf024d3d998a6))
+- **props:** fix invalid props for all Components ([1703258](https://github.com/rescript-ui/rescript-chakra/commit/170325885b7a23fd3f333700505ba78c07d6b70d))
+- **Select:** fix custom colors ([#22](https://github.com/rescript-ui/rescript-chakra/issues/22)) ([8d9182e](https://github.com/rescript-ui/rescript-chakra/commit/8d9182e9f36491c3867d16a20f4f9b8d03bc89d8))
+
+### Features
+
+- **Fade, ScaleFade, Slide:** add component binding for Fade, ScaleFade, & Slide ([7b30d49](https://github.com/rescript-ui/rescript-chakra/commit/7b30d4945058a1ab28a361c7d993df123567d60f))
+- **Feedback:** add component binding for feedback ([#16](https://github.com/rescript-ui/rescript-chakra/issues/16)) ([e68c2cb](https://github.com/rescript-ui/rescript-chakra/commit/e68c2cb6b7fe3c4ae91953bc9c95a2f37028d113))
+- **Input:** add binding for Input ([#23](https://github.com/rescript-ui/rescript-chakra/issues/23)) ([7cdf3f9](https://github.com/rescript-ui/rescript-chakra/commit/7cdf3f966db1b962776cc28aa960323fae45135a))
+- **Input:** add binding for Input extra ([#24](https://github.com/rescript-ui/rescript-chakra/issues/24)) ([4a6e846](https://github.com/rescript-ui/rescript-chakra/commit/4a6e84666889e0282fb960aa53c94eeea9c1c340))
+- **Interfaces:** add binding for some HTML specification ([0b1040e](https://github.com/rescript-ui/rescript-chakra/commit/0b1040e900a6097c016fbf782134e28669497914))
+- **MakeProps:** add sub-modules in MakeProps for handle object-fit, noOfLines, viewBox, and multi-type(string-or-number). ([51a1924](https://github.com/rescript-ui/rescript-chakra/commit/51a192426df328bf53aa47b75edc36cb3c7e5cc6))
+- **Media:** add bindin for Icon and Image Component ([762108e](https://github.com/rescript-ui/rescript-chakra/commit/762108e3f7da13f863fefea976237a537d993028))
+- **Media:** add binding component Avatar & AvatarGroup. ([a96e39e](https://github.com/rescript-ui/rescript-chakra/commit/a96e39e31a151ac3926fa8eed20c8ae170a02f49))
+- **Navigation:** add binding for component navigation ([4428ec8](https://github.com/rescript-ui/rescript-chakra/commit/4428ec87d0d2c66e3f6ec09142a26cd569878588))
+- **Others:** add binding for Portal Component ([68e9679](https://github.com/rescript-ui/rescript-chakra/commit/68e967915c9a09d1a7978747438571f8cfe102ac))
+- **Select:** add bindings for select ([#17](https://github.com/rescript-ui/rescript-chakra/issues/17)) ([26e9b43](https://github.com/rescript-ui/rescript-chakra/commit/26e9b43e1451aa978893da8f9df360f33743bde9))
+- **Select:** fix syntax ([ba061dd](https://github.com/rescript-ui/rescript-chakra/commit/ba061dd16a7cd63842ba6718c1b71b5a980744cd))
+- **Spacer:** add binding for Spacer component ([#25](https://github.com/rescript-ui/rescript-chakra/issues/25)) ([e3ce148](https://github.com/rescript-ui/rescript-chakra/commit/e3ce14836c6bf8c3a16e5b6a603facb2453f21a6))
+- support for rescript v11 ([#29](https://github.com/rescript-ui/rescript-chakra/issues/29)) ([b87ffe5](https://github.com/rescript-ui/rescript-chakra/commit/b87ffe59f1b684ca73da81d642e5d5303066cb53))
+- **Typography:** add binding for Heading and Text ([9f707a2](https://github.com/rescript-ui/rescript-chakra/commit/9f707a2b27b0e1b8ce9d182903711094bd0937e3))
+
 # [1.2.0-next.11](https://github.com/ri7nz/rescript-chakra/compare/v1.2.0-next.10...v1.2.0-next.11) (2021-10-12)
 
 ### Bug Fixes
