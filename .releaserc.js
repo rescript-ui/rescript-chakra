@@ -35,7 +35,7 @@ module.exports = {
     ],
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semrel-extra/npm",
+    "@semantic-release/npm",
     "@semantic-release/git",
     "@semantic-release/github",
   ],
