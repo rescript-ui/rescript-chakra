@@ -39,7 +39,7 @@ jobs:
         run: yarn build
 
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v6
         with:
           semantic_version: 24.1.0
           branches: |
